@@ -20,7 +20,7 @@ const Navbar = () => {
         <div className='cursor-pointer font-semibold hover:text-slate-300 transition-colors text-1xl mr-2'>Contact</div>
         <div className='cursor-pointer font-semibold hover:text-slate-300 transition-colors text-1xl mr-2'>Projects</div>
         <div className='cursor-pointer font-semibold hover:text-slate-300 transition-colors text-1xl mr-2'>Resume</div>
-        {displayMode ? <div onClick={changeMode}><MdOutlineLightMode /></div> : <div onClick={changeMode}><MdOutlineDarkMode /></div>}
+        {displayMode ? <div onClick={changeMode}><MdOutlineLightMode size={30}/></div> : <div onClick={changeMode}><MdOutlineDarkMode size={30}/></div>}
       </div>
       <div onClick={toggle} className={`md:hidden flex items-center rounded-full p-2
       ${(displayMode) ?(clicked?'bg-[#46465b] text-white':''):(clicked?'bg-[#333353] text-white':'bg-dark text-white')}
