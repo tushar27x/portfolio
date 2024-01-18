@@ -7,11 +7,20 @@ import Reveal from './components/Reveal'
 export default function Home() {
   return (
     <>
+      <div id='title'>
       <Reveal>
         <Title />
       </Reveal>
-      <About />
-      <Projects />
+      </div>
+      <div id='about'>
+        <Reveal>
+          <About/> 
+        </Reveal>
+      </div>
+
+      <div id='projects'>
+        <Projects />
+      </div>
       <Contact />
     </>
   )
