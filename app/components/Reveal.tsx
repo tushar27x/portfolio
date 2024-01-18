@@ -22,7 +22,7 @@ const Reveal = ({children}:{children:React.ReactNode}) => {
                     visible:{opacity:1, y:0},
                 }}    
                 initial="hidden"
-                animate="visible"
+                animate={mainControls}
                 transition={{delay:0.25, duration:0.5}}
             >
                 {children}

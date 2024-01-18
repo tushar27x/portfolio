@@ -6,8 +6,10 @@ import { useThemeContext } from '@/app/ThemeProvider'
 const Title = () => {
   const {displayMode} = useThemeContext();
   return (
-    <div className={`flex flex-col md:flex-row-reverse md:gap-[10rem] items-center gap-8 ${displayMode? 'bg-light text-dark': 'bg-dark/90 text-light/90'} title-section h-[75vh] md:px-8`}>
-      <div className='w-full flex flex-col md:flex-row-reverse md:justify-around items-center gap-10 md:gap-0 px-[5rem] py-[2rem]'>
+    <div className={`flex flex-col py-[5rem] md:flex-row-reverse md:gap-[10rem] lg:py-[12rem] items-center gap-8 ${displayMode? 'bg-light text-dark': 'bg-dark/90 text-light/90'} title-section  md:px-8`}
+    >
+      <div className='w-full flex flex-col md:flex-row-reverse md:justify-around items-center gap-10 md:gap- px-[5rem] py-[2rem]'
+      >
         <div className='w-[200px]'>
           <Avatar src={'/profile-rounded.png'}/>
         </div>
