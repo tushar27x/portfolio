@@ -17,11 +17,11 @@ export default function Home() {
           <About/> 
         </Reveal>
       </div>
-      <div id='projects'>
+      <div id='project'>
         <Projects />
       </div>
       {/* TODO */}
-      <div>
+      <div id='contact'>
         <Contact />
       </div>
     </>

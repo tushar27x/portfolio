@@ -12,7 +12,7 @@ const Projects = () => {
     <div className={`${displayMode? 'bg-light text-dark':'bg-dark/90 text-light'} p-[6rem]`}>
       <div className='flex flex-col items-center gap-[2rem]'>
         <div>
-          <h1 className='text-3xl font-bold'>Projects</h1>
+          <h1 className='text-3xl font-bold'>PROJECTS</h1>
         </div>
         <Reveal>
           <div className='flex flex-col items-center w-full gap-5 md:flex-row md:gap-[5rem] lg:flex-row lg:gap-[8rem]'>
