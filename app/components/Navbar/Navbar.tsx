@@ -20,7 +20,7 @@ const Navbar = () => {
       <div className='hidden nav-links md:flex flex-row justify-between items-center gap-10 '>
         <Link href={'#about'}><div className='cursor-pointer font-semibold hover:text-slate-300 transition-colors text-1xl mr-2'>About</div></Link>
         <Link href={'#contact'}><div className='cursor-pointer font-semibold hover:text-slate-300 transition-colors text-1xl mr-2'>Contact</div></Link>
-        <Link href={'#projects'}><div className='cursor-pointer font-semibold hover:text-slate-300 transition-colors text-1xl mr-2'>Projects</div></Link>
+        <Link href={'#project'}><div className='cursor-pointer font-semibold hover:text-slate-300 transition-colors text-1xl mr-2'>Projects</div></Link>
         <Link href={'#'}><div className='cursor-pointer font-semibold hover:text-slate-300 transition-colors text-1xl mr-2'>Resume</div></Link>
         {displayMode ? <div onClick={changeMode}><MdOutlineLightMode size={30}/></div> : <div onClick={changeMode}><MdOutlineDarkMode size={30}/></div>}
       </div>
