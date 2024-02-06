@@ -2,6 +2,7 @@
 import React from 'react'
 import Avatar from './Avatar'
 import { useThemeContext } from '@/app/ThemeProvider'
+import { TypeAnimation } from 'react-type-animation'
 
 const Title = () => {
   const {displayMode} = useThemeContext();
@@ -14,9 +15,27 @@ const Title = () => {
           <Avatar src={'/profile-rounded.png'}/>
         </div>
         <div className='flex flex-col w-full md:w-1/2 text-center justify-center md:text-left lg:text-left md:items-center'>
-          <h1 className='font-extrabold text-6xl'>Hi!<br />I am Tushar Sharma
-          </h1>
-          <h3 className='mt-8 w-full font-semibold text-2xl px-8'>I am a full-stack developer</h3>
+          <div>
+            <h1 className='font-extrabold text-6xl'>Hi!<br />I am Tushar Sharma</h1>
+          </div>
+          <div className='flex justify-center lg:justify-start md:w-full px-8 md:text-left'>
+            <TypeAnimation
+              sequence={[
+                'Full Stack developer',
+                1000, // wait 1s before replacing "Mice" with "Hamsters"
+                'Software Engineer',
+                1000,
+                'React developer',
+                1000,
+                'MERN stack developer',
+                1000
+              ]}  
+              wrapper="span"
+              speed={50}
+              style={{ fontSize: '2em', display: 'inline-block' }}
+              repeat={Infinity}
+            />
+          </div>
         </div>
       </div>
 
