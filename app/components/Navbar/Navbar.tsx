@@ -1,7 +1,6 @@
 "use client"
 import Link from 'next/link'
 import React, { useState } from 'react'
-import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineDarkMode } from "react-icons/md";
 import { MdOutlineLightMode } from "react-icons/md";
 import { useThemeContext } from '../../ThemeProvider';
