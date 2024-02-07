@@ -18,19 +18,19 @@ const Projects = () => {
           <div className='flex flex-col items-center w-full gap-5 md:flex-row md:gap-[5rem] lg:flex-row lg:gap-[8rem]'>
             {
               projects.map((project) =>{
-                return(
-                      <div className='w-full text-center'>
-                  <div className='flex flex-col items-center py-5'>
-                    <Link href={"https://github.com/Tushar27x/airbnb"}>
-                    <div className={`border-[8px] ${displayMode?'border-blue-300':'border-dark/100'} `}>
-                      <PhotoPop>
-                      <Image src={project.imageUrl} width={500} height={200} alt="project-ss" />
-                      </PhotoPop>
+                return( 
+                  <div key={project.id} className='w-full text-center'>
+                    <div className='flex flex-col items-center py-5'>
+                      <Link href={"https://github.com/Tushar27x/airbnb"}>
+                        <div className={`border-[8px] ${displayMode?'border-blue-300':'border-dark/100'} `}>
+                          <PhotoPop>
+                            <Image src={project.imageUrl} width={500} height={200} alt="project-ss" />
+                          </PhotoPop>
+                        </div>
+                      </Link>
                     </div>
-                    </Link>
+                    <h3 className='font-semibold text-1xl'>{project.title}</h3>
                   </div>
-                  <h3 className='font-semibold text-1xl'>{project.title}</h3>
-                </div>
                 )
               })
             }
