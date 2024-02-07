@@ -9,7 +9,7 @@ import EmailForm from './EmailForm';
 const Contact = () => {
   const {displayMode} = useThemeContext();
   return (
-    <div className={`${displayMode ? 'bg-light':'bg-dark text-light'} p-[6rem] flex flex-col items-center gap-[2rem]`}>
+    <div className={`${displayMode? 'bg-[#e8f7f9]':'bg-dark/85 text-white'} p-[6rem] flex flex-col items-center gap-[2rem]`}>
       <div>
         <h1 className='text-3xl font-bold'>CONTACT</h1>
       </div>
