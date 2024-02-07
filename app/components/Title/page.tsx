@@ -1,11 +1,12 @@
 "use client"
-import React from 'react'
-import Avatar from './Avatar'
-import { useThemeContext } from '@/app/ThemeProvider'
-import { TypeAnimation } from 'react-type-animation'
-
+import React from 'react';
+import Avatar from './Avatar';
+import { useThemeContext } from '@/app/ThemeProvider';
+import { TypeAnimation } from 'react-type-animation';
+import download from '@/app/downloadResume';
 const Title = () => {
   const {displayMode} = useThemeContext();
+  
   return (
     <div className={`flex flex-col py-[5rem] md:flex-row-reverse md:gap-[10rem] lg:py-[12rem] items-center gap-8 ${displayMode? 'bg-light text-dark': 'bg-dark/90 text-light/90'} title-section  md:px-8`}
     >
@@ -25,9 +26,11 @@ const Title = () => {
                 1000, // wait 1s before replacing "Mice" with "Hamsters"
                 'Software Engineer',
                 1000,
-                'React developer',
+                'React Developer',
                 1000,
-                'MERN stack developer',
+                'MERN stack Developer',
+                1000,
+                'Next.js Developer',
                 1000
               ]}  
               wrapper="span"
@@ -36,11 +39,19 @@ const Title = () => {
               repeat={Infinity}
             />
           </div>
+          <div className='w-full md:w-full py-8'>
+            <div className="w-full py-4 px-8 md:text-left">
+              <button 
+                onClick={download}
+                className='py-2 px-8 bg-rose-500 hover:bg-rose-300 rounded-md text-light font-semibold'>
+                Resume
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
     </div>
   )
 }
-
 export default Title

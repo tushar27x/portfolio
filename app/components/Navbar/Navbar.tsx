@@ -6,6 +6,7 @@ import { MdOutlineLightMode } from "react-icons/md";
 import { useThemeContext } from '../../ThemeProvider';
 import Hamburger from './Hamburger';
 import SideMenu from './SideMenu';
+import download from '@/app/downloadResume';
 const Navbar = () => {
   const {displayMode,changeMode} = useThemeContext();
   const [clicked,setClicked] = useState(false);
@@ -20,7 +21,7 @@ const Navbar = () => {
         <Link href={'#about'}><div className='cursor-pointer font-semibold hover:text-slate-300 transition-colors text-1xl mr-2'>About</div></Link>
         <Link href={'#contact'}><div className='cursor-pointer font-semibold hover:text-slate-300 transition-colors text-1xl mr-2'>Contact</div></Link>
         <Link href={'#project'}><div className='cursor-pointer font-semibold hover:text-slate-300 transition-colors text-1xl mr-2'>Projects</div></Link>
-        <Link href={'#'}><div className='cursor-pointer font-semibold hover:text-slate-300 transition-colors text-1xl mr-2'>Resume</div></Link>
+        <div onClick={download}className='cursor-pointer font-semibold hover:text-slate-300 transition-colors text-1xl mr-2'>Resume</div>
         {displayMode ? <div onClick={changeMode}><MdOutlineLightMode size={30}/></div> : <div onClick={changeMode}><MdOutlineDarkMode size={30}/></div>}
       </div>
       <Hamburger displayMode={displayMode} clicked={clicked} toggle={toggle}/>
