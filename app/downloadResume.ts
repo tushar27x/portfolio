@@ -1,6 +1,6 @@
 const download = ()=>{
     const fileName= 'TusharSharma.pdf';
-    const filePath = "/Tushar-Sharma.pdf";
+    const filePath = "/Tushar Sharma.pdf";
     const link = document.createElement('a');
     link.href = filePath;
     link.setAttribute('download', fileName);
