@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react'
 import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
-
+import download from '@/app/downloadResume';
 interface SideMenuProps{
     displayMode: boolean;
     changeMode: ()=>void;
@@ -38,7 +38,7 @@ const SideMenu = ({
         <Link href={"#about"}><div className='cursor-pointer font-semibold hover:text-slate-500 transition-colors text-1xl mr-2 py-2'>About</div></Link>
         <Link href={"#project"}><div className='cursor-pointer font-semibold hover:text-slate-500 transition-colors text-1xl mr-2 py-2'>Projects</div></Link>
         <Link href={"#contact"}><div className='cursor-pointer font-semibold hover:text-slate-500 transition-colors text-1xl mr-2 py-2'>Contact</div></Link>
-        <Link href={"#"}><div className='cursor-pointer font-semibold hover:text-slate-500 transition-colors text-1xl mr-2 mt-2'>Resume</div></Link>
+        <div onClick={download}className='cursor-pointer font-semibold hover:text-slate-500 transition-colors text-1xl mr-2 py-2'>Resume</div>
       </div>
       
     </div>
