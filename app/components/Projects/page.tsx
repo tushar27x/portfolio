@@ -21,7 +21,7 @@ const Projects = () => {
                 return( 
                   <div key={project.id} className='w-full text-center'>
                     <div className='flex flex-col items-center py-5'>
-                      <Link href={"https://github.com/Tushar27x/airbnb"}>
+                      <Link href={project.gitHubUrl}>
                         <div className={`border-[8px] ${displayMode?'border-blue-300':'border-dark/100'} `}>
                           <PhotoPop>
                             <Image src={project.imageUrl} width={500} height={200} alt="project-ss" />
