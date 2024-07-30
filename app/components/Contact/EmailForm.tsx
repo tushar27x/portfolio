@@ -3,7 +3,11 @@ import {useForm} from 'react-hook-form';
 import {z} from 'zod';
 import {zodResolver} from '@hookform/resolvers/zod';
 import { useState } from 'react';
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+
 import axios from 'axios';
+import { Button } from '@/components/ui/button';
 
 const schema = z.object({
   email: z.string().email(),
@@ -55,20 +59,19 @@ const EmailForm = () => {
     <div className='flex flex-col w-full md:w-2/3'>
       <form
         onSubmit={handleSubmit}
-        className='flex flex-col gap-2 text-black' 
+        className='flex flex-col gap-2 p-2' 
         autoComplete='off'>
-        <input {...register("user_name",{
+        <Input {...register("user_name",{
           required:"Name is required",
           minLength: 2
           })} 
           onChange={(e)=>setName(e.target.value)}
-          className='border border-black border-10 rounded-md p-2' 
           type="text" 
           name='user_name' 
           placeholder='Name'
         />
         {errors.user_name && <div className='text-red-500'>{errors.user_name.message}</div>}
-        <input {...register("email", {
+        <Input {...register("email", {
           required:"Email is required", 
           validate: (value)=> {
             if(!value.includes('@')){
@@ -79,23 +82,21 @@ const EmailForm = () => {
         })
         } 
         onChange={(e)=>setEmail(e.target.value)}
-        className='border border-black border-10 rounded-md p-2'
         type='text' 
         placeholder='Email'
       />
       {errors.email && <div className='text-red-500'>{errors.email.message}</div>}
-      <textarea {...register("message",{
+      <Textarea {...register("message",{
         validate: (value)=>value.length > 1
         })
         }
         onChange={(e)=>setMessage(e.target.value)}
-        className='border border-black border-10 rounded-md p-2' placeholder='Message'
+        placeholder='Message'
       />
-      <button disabled={isSubmitting} 
-        className='p-2 w-full bg-rose-500 hover:bg-rose-300 rounded-md text-light font-semibold'
+      <Button disabled={isSubmitting} 
       >
         {buttonText}
-      </button>
+      </Button>
       </form>
     </div>
   )
