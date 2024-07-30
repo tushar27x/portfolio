@@ -1,25 +1,26 @@
 "use client"
 import React from 'react';
 import Avatar from './Avatar';
-import { useThemeContext } from '@/app/ThemeProvider';
 import { TypeAnimation } from 'react-type-animation';
-import download from '@/app/downloadResume';
+import download from '@/app/utils/downloadResume';
+import Reveal from '../Reveal';
 const Title = () => {
-  const {displayMode} = useThemeContext();
   
   return (
-    <div className={`flex flex-col py-[5rem] md:flex-row-reverse md:gap-[10rem] lg:py-[12rem] items-center gap-8 ${displayMode? 'bg-light text-dark': 'bg-dark/90 text-light/90'} title-section  md:px-8`}
+    <div className={`flex flex-col py-[10rem] md:flex-row-reverse md:gap-[10rem] lg:py-[20rem] items-center gap-8`}
     >
       <div className='w-full flex flex-col md:flex-row-reverse md:justify-around items-center gap-10 md:gap- px-[5rem] py-[2rem]'
       >
-        <div className='w-[200px]'>
-          <Avatar src={'/profile-rounded.png'}/>
-        </div>
-        <div className='flex flex-col w-full md:w-1/2 text-center justify-center md:text-left lg:text-left md:items-center'>
+        <Reveal>
+          <div className='w-[200px]'>
+            <Avatar src={'/profile-rounded.png'}/>
+          </div>
+        </Reveal>
+        <div className='flex flex-col w-full md:w-1/2 text-center justify-center md:text-left lg:text-left md:items-center '>
           <div>
             <h1 className='font-extrabold text-6xl'>Hi!<br />I am Tushar Sharma</h1>
           </div>
-          <div className='flex justify-center lg:justify-start md:w-full px-8 md:text-left'>
+          <div className='flex justify-center lg:justify-start md:w-full pl-12 md:text-left'>
             <TypeAnimation
               sequence={[
                 'Full Stack developer',
@@ -40,7 +41,7 @@ const Title = () => {
             />
           </div>
           <div className='w-full md:w-full py-8'>
-            <div className="w-full py-4 px-8 md:text-left">
+            <div className="w-full py-4 lg:pl-12 md:text-left">
               <button 
                 onClick={download}
                 className='py-2 px-8 bg-rose-500 hover:bg-rose-300 rounded-md text-light font-semibold'>

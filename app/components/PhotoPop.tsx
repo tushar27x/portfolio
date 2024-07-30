@@ -1,7 +1,7 @@
 "use client";
-import {easeIn, motion, useAnimation, useInView} from 'framer-motion';
+import {motion, useAnimation, useInView} from 'framer-motion';
 import { useEffect, useRef } from 'react';
-const PhotoPop = ({children}:{children:React.ReactNode}) => {
+const Pop = ({children}:{children:React.ReactNode}) => {
     const ref = useRef(null);
     const isInView = useInView(ref, {once:true});
 
@@ -30,4 +30,4 @@ const PhotoPop = ({children}:{children:React.ReactNode}) => {
   )
 }
 
-export default PhotoPop
+export default Pop

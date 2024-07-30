@@ -1,26 +1,26 @@
-import Image from 'next/image'
 import Title from './components/Title/page'
 import About from './components/About/page'
 import Projects from './components/Projects/page'
 import Contact from './components/Contact/page'
-import Reveal from './components/Reveal'
+import Navbar from './components/Navbar/page'
+import Skills from './components/Skills/page'
+
 export default function Home() {
   return (
-    <>
+    <>  
+      <Navbar />
       <div id='title'>
-      <Reveal>
         <Title />
-      </Reveal>
       </div>
       <div id='about'>
-        <Reveal>
           <About/> 
-        </Reveal>
+      </div>
+      <div id='skills'>
+        <Skills />
       </div>
       <div id='project'>
         <Projects />
       </div>
-      {/* TODO */}
       <div id='contact'>
         <Contact />
       </div>

@@ -4,8 +4,8 @@ const Avatar = ({src}:{src:string}) => {
   return (
     <Image 
         src={src} 
-        width={400} 
-        height={300} 
+        width={800} 
+        height={0} 
         alt='avatar'
         className='drop-shadow-lg'
     />

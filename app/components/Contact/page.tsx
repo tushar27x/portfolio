@@ -2,14 +2,12 @@
 import React from 'react';
 import { FaGithub } from "react-icons/fa";
 import { FaXTwitter, FaLinkedin, FaInstagram  } from "react-icons/fa6";
-import {useThemeContext} from '@/app/ThemeProvider'
 import Reveal from '../Reveal';
 import Link from 'next/link';
 import EmailForm from './EmailForm';
 const Contact = () => {
-  const {displayMode} = useThemeContext();
   return (
-    <div className={`${displayMode? 'bg-[#e8f7f9]':'bg-dark/85 text-white'} p-[6rem] flex flex-col items-center gap-[2rem]`}>
+    <div className={`p-[6rem] flex flex-col items-center gap-[2rem]`}>
       <div>
         <h1 className='text-3xl font-bold'>CONTACT</h1>
       </div>
@@ -20,9 +18,9 @@ const Contact = () => {
             <div className='w-full flex flex-col'>
               <h3 className='pb-5 text-center md:text-left'>Feel free to contact me on social media</h3>
               <div className='hidden md:flex lg:hidden flex-col justify-center items-center gap-1'>
-                <div className={`w-[2px] h-full ${displayMode? 'bg-dark/50':'bg-light/50'}`}></div>
+                <div className={`w-[2px] h-full `}></div>
                 <div>OR</div>
-                <div className={`w-[2px] h-full ${displayMode? 'bg-dark/50':'bg-light/50'}`}></div>
+                <div className={`w-[2px] h-full `}></div>
               </div>
               <div className='flex md:flex-col pt-2 justify-between'>
                   <Link href={'https://github.com/Tushar27x'}>
@@ -53,16 +51,16 @@ const Contact = () => {
             </div>
 
             <div className='flex flex-row md:hidden lg:hidden justify-center items-center gap-4 py-4'>
-              <div className={`w-full h-[2px] ${displayMode? 'bg-dark/50':'bg-light/50'}`}></div>
+              <div className={`w-full h-[2px]`}></div>
               <div>OR</div>
-              <div className={`w-full h-[2px] ${displayMode? 'bg-dark/50':'bg-light/50'}`}></div>
+              <div className={`w-full h-[2px]`}></div>
             </div>
 
             <div className='flex flex-row justify-between gap-6 w-full'>
               <div className='hidden md:flex flex-col justify-center items-center gap-1'>
-                <div className={`w-[2px] h-full ${displayMode? 'bg-dark/50':'bg-light/50'}`}></div>
+                <div className={`w-[2px] h-full`}></div>
                 <div>OR</div>
-                <div className={`w-[2px] h-full ${displayMode? 'bg-dark/50':'bg-light/50'}`}></div>
+                <div className={`w-[2px] h-full`}></div>
               </div>
               <EmailForm />
             </div>
