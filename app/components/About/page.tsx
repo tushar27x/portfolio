@@ -19,10 +19,17 @@ const About = () => {
               </PhotoPop>
           </div>
           <Reveal>
-            <p className='text-center md:text-left lg:text-left font-semibold text-1xl'>
-              I am a 3rd year student pursuing my B.Tech in IT from Guru Tegh Bahadur Institute of Technology, New Delhi.<br/><br/>
-              I am a passionate and detail-oriented Full Stack Developer, eager to embark on an exciting journey in the world of web development. I bring a wealth of knowledge and hands-on experience with the MERN (MongoDB, Express.js, React.js, Node.js) stack, coupled with expertise in Next.js.
-            </p>
+          <p>
+            I am Tushar Sharma, a final-year B.Tech student and a software engineer with expertise in full-stack web development. 
+            I have extensive experience working with Java to write server-side code, along with proficiency in SQL databases and Elasticsearch. 
+            My skill set also includes JavaScript, TypeScript, C++, and frameworks like React.js, Node.js, Express.js, and Next.js. 
+            I specialize in REST API development and UI/UX design.
+          </p><br />
+          <p>
+            Currently, I am working as a <strong>Software Engineer Trainee</strong> at <strong>Salescode.ai</strong>, 
+            contributing to innovative projects while continuously enhancing my skills. I am passionate about problem-solving, 
+            creating seamless user experiences, and embracing new challenges in the tech industry.
+          </p>
           </Reveal>
         </div>
       </div>

@@ -94,6 +94,7 @@ const EmailForm = () => {
         placeholder='Message'
       />
       <Button disabled={isSubmitting} 
+      variant={"outline"}
       >
         {buttonText}
       </Button>
