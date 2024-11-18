@@ -23,8 +23,8 @@ export default function Navbar() {
             <NavLink href="#about">About</NavLink>
             <NavLink href="#skills">Skills</NavLink>
             <NavLink href="#project">Projects</NavLink>
-            <NavLink href="#contact">Contact</NavLink>
             <NavLink href='#experience'>Experience</NavLink>
+            <NavLink href="#contact">Contact</NavLink>
 
             <Button 
               variant="ghost"
@@ -42,9 +42,6 @@ export default function Navbar() {
         </div>
       </nav>
       <SideMenu isOpen={isSideMenuOpen} onClose={() => setIsSideMenuOpen(false)} />
-      <div className="pt-16">
-        {/* Your page content goes here */}
-      </div>
     </>
   )
 }
