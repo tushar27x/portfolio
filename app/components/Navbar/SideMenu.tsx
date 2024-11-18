@@ -6,7 +6,7 @@ import download from '@/app/utils/downloadResume'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { IoMdCodeDownload } from 'react-icons/io'
+import { IoMdDownload } from "react-icons/io";
 
 interface SideMenuProps {
   isOpen: boolean
@@ -28,7 +28,7 @@ export default function SideMenu({ isOpen, onClose }: SideMenuProps) {
             <NavLink href='#experience' onClick={onClose}>Experience</NavLink>
             <NavLink href="#contact" onClick={onClose}>Contact</NavLink>
             <Button variant="ghost" className="justify-start" onClick={() => { download(); onClose(); }}>
-              Resume<IoMdCodeDownload size={20}/>
+              Resume<IoMdDownload size={20}/>
             </Button>
             <ModeToggle />
           </nav>
