@@ -4,6 +4,7 @@ import Projects from './components/Projects/page'
 import Contact from './components/Contact/page'
 import Navbar from './components/Navbar/page'
 import Skills from './components/Skills/page'
+import Experience from './components/Experience/page';
 
 export default function Home() {
   return (
@@ -17,6 +18,9 @@ export default function Home() {
       </div>
       <div id='skills'>
         <Skills />
+      </div>
+      <div>
+        <Experience />
       </div>
       <div id='project'>
         <Projects />
