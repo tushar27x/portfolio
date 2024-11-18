@@ -6,7 +6,7 @@ import Reveal from '../Reveal';
 const Title = () => {
   
   return (
-    <div className={`flex flex-col py-[10rem] md:flex-row-reverse md:gap-[10rem] lg:py-[20rem] items-center gap-8`}
+    <div className={`flex flex-col py-[10rem] md:flex-row-reverse md:gap-[10rem] lg:py-[10rem] items-center gap-8`}
     >
       <div className='w-full flex flex-col md:flex-row-reverse md:justify-around items-center gap-10 py-[2rem]'
       >
@@ -19,7 +19,7 @@ const Title = () => {
           <div>
             <h1 className='font-extrabold text-6xl'>Hi!<br />I am Tushar Sharma</h1>
           </div>
-          <div className='flex justify-center lg:justify-start md:w-full pl-12 md:text-left'>
+          <div className='flex justify-center lg:justify-start md:w-full mt-10 md:text-left'>
             <TypeAnimation
               sequence={[
                 'Full Stack developer',
