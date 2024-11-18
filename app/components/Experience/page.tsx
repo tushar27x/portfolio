@@ -19,15 +19,17 @@ export default function ExperienceSection() {
   ]
 
   return (
-    <section id="experience" className="w-full max-w-4xl mx-auto p-6">
-      <h2 className="text-3xl font-bold mb-8 text-primary text-center">Experience</h2>
-      {experiences && experiences.length > 0 ? (
-        experiences.map((experience, index) => (
-          <ExperienceCard key={index} {...experience} />
-        ))
-      ) : (
-        <p className="text-muted-foreground">No experience entries found.</p>
-      )}
-    </section>
+    <div >
+      <div className='flex items-center flex-col gap-5 px-20 lg:px-[10rem] lg:py-[5rem] md:py-[2rem] md:px-[1rem]'>
+        <h2 className="text-3xl font-bold mb-8 text-primary text-center">Experience</h2>
+        {experiences && experiences.length > 0 ? (
+          experiences.map((experience, index) => (
+            <ExperienceCard key={index} {...experience} />
+          ))
+        ) : (
+          <p className="text-muted-foreground">No experience entries found.</p>
+        )}
+      </div>
+    </div>
   )
 }

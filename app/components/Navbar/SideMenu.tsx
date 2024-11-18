@@ -25,8 +25,8 @@ export default function SideMenu({ isOpen, onClose }: SideMenuProps) {
             <NavLink href="#about" onClick={onClose}>About</NavLink>
             <NavLink href="#skills" onClick={onClose}>Skills</NavLink>
             <NavLink href="#project" onClick={onClose}>Projects</NavLink>
-            <NavLink href="#contact" onClick={onClose}>Contact</NavLink>
             <NavLink href='#experience' onClick={onClose}>Experience</NavLink>
+            <NavLink href="#contact" onClick={onClose}>Contact</NavLink>
             <Button variant="ghost" className="justify-start" onClick={() => { download(); onClose(); }}>
               Resume<IoMdCodeDownload size={20}/>
             </Button>

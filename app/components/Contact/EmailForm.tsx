@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea"
 
 import axios from 'axios';
 import { Button } from '@/components/ui/button';
+import { ThemeProvider } from '../theme-provider';
 
 const schema = z.object({
   email: z.string().email(),
@@ -94,7 +95,7 @@ const EmailForm = () => {
         placeholder='Message'
       />
       <Button disabled={isSubmitting} 
-      variant={"outline"}
+      variant={"default"}
       >
         {buttonText}
       </Button>
