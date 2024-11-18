@@ -2,14 +2,13 @@
 import React from 'react';
 import Avatar from './Avatar';
 import { TypeAnimation } from 'react-type-animation';
-import download from '@/app/utils/downloadResume';
 import Reveal from '../Reveal';
 const Title = () => {
   
   return (
     <div className={`flex flex-col py-[10rem] md:flex-row-reverse md:gap-[10rem] lg:py-[20rem] items-center gap-8`}
     >
-      <div className='w-full flex flex-col md:flex-row-reverse md:justify-around items-center gap-10 md:gap- px-[5rem] py-[2rem]'
+      <div className='w-full flex flex-col md:flex-row-reverse md:justify-around items-center gap-10 py-[2rem]'
       >
         <Reveal>
           <div className='w-[200px]'>
@@ -41,13 +40,6 @@ const Title = () => {
             />
           </div>
           <div className='w-full md:w-full py-8'>
-            <div className="w-full py-4 lg:pl-12 md:text-left">
-              <button 
-                onClick={download}
-                className='py-2 px-8 bg-rose-500 hover:bg-rose-300 rounded-md text-light font-semibold'>
-                Resume
-              </button>
-            </div>
           </div>
         </div>
       </div>
