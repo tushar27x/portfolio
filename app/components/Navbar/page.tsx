@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 import { ModeToggle } from '../ModeToggle'
 import download from '@/app/utils/downloadResume'
 import SideMenu from './SideMenu'
-import { IoMdCodeDownload } from "react-icons/io"
+import { IoMdDownload } from "react-icons/io";
 import { Button } from "@/components/ui/button"
 import { Menu } from "lucide-react"
 
@@ -31,7 +31,7 @@ export default function Navbar() {
               onClick={download}
               className='flex items-center gap-2'
             >
-              Resume<IoMdCodeDownload size={20}/>
+              Resume<IoMdDownload size={20}/>
             </Button>
             <ModeToggle />
           </div>

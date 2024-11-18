@@ -7,7 +7,7 @@ const Skills = () => {
   return (
     <Reveal>
     <div>
-      <div className='flex items-center flex-col gap-5 px-20 lg:px-[10rem] lg:py-[5rem] md:py-[2rem] md:px-[1rem]'>
+      <div className='flex items-center flex-col gap-5 px-20 lg:px-[10rem] lg:py-[5rem] md:py-[2rem] md:px-[1rem] py-10'>
         <div className='text-center'>
           <h1 className='text-3xl font-bold'>SKILLS</h1>
         </div>

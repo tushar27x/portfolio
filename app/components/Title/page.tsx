@@ -8,10 +8,10 @@ import { motion } from "framer-motion"
 
 export default function Title() {
   return (
-    <section className="py-20 md:py-32 lg:py-40">
+    <div className="py-20 md:py-32 lg:py-40">
       <div className="container mx-auto px-4">
         <div className="bg-background/60 backdrop-blur-sm">
-          <div className="p-6 md:p-10">
+          <div className="p-6 md:px-28 md:py-16">
             <div className="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-16">
               <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
@@ -49,6 +49,6 @@ export default function Title() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
