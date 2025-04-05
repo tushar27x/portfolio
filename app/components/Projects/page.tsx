@@ -26,7 +26,7 @@ const Projects = () => {
                           <Link href={project.gitHubUrl}><Github size={20}/></Link>
                         </div>
                         <div className='hover:opacity-50'>
-                          <Link href={project.liveUrl}><TvMinimalPlay size={20}/></Link>
+                          {project.liveUrl && <Link href={project.liveUrl}><TvMinimalPlay size={20}/></Link>}
                         </div>
                       </div>
                     </div>
