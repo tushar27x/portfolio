@@ -53,7 +53,7 @@ const ExperienceCard = ({
           </ul>
         </div>
         <div className="flex flex-wrap gap-2 mt-2">
-          {['React', 'TypeScript', 'Node.js', 'Elasticsearch', 'Java', 'SQL'].map((skill) => (
+          {['React', 'TypeScript', 'Node.js', 'Elasticsearch', 'Java', 'SQL', 'Go'].map((skill) => (
             <Badge key={skill} variant="secondary">{skill}</Badge>
           ))}
         </div>

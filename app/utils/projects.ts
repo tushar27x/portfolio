@@ -20,6 +20,12 @@ const projects =[
         gitHubUrl: 'https://github.com/Tushar27x/medium-clone',
         liveUrl: 'https://blogs-gkfexx788-tushar27xs-projects.vercel.app/'
     },
+    {
+        id: 4,
+        title: 'Personal Shell',
+        imageUrl: '/go-shell.png',
+        gitHubUrl: 'https://github.com/tushar27x/go-CLI'
+    }
 
 ];
 
