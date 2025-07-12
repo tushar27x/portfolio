@@ -56,10 +56,10 @@ const Contact = () => {
                 <div className="space-y-6">
                   <div className="text-center md:text-left">
                     <h2 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
-                      Let's Connect
+                      Let&apos;s Connect
                     </h2>
                     <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                      I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology and development.
+                      I&apos;m always open to discussing new opportunities, interesting projects, or just having a chat about technology and development.
                     </p>
                   </div>
                   
@@ -154,7 +154,7 @@ const Contact = () => {
                 </h3>
                 <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
                   Whether you have a project in mind, want to discuss opportunities, or just want to say hello, 
-                  I'd love to hear from you. Let's build something amazing together!
+                  I&apos;d love to hear from you. Let&apos;s build something amazing together!
                 </p>
                 <div className="flex justify-center gap-4 pt-4">
                   <Badge variant="outline" className="text-sm">Open to Work</Badge>
