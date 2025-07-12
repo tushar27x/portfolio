@@ -5,34 +5,31 @@ import Contact from './components/Contact/page'
 import Navbar from './components/Navbar/page'
 import Skills from './components/Skills/page'
 import Experience from './components/Experience/page';
+import FloatingThemeToggle from './components/FloatingThemeToggle';
 
 export default function Home() {
   return (
     <>  
       <Navbar />
-      <div id='title'>
+      <div id='home'>
         <Title />
       </div>
-      <hr className="w-3/4 mx-auto border-gray-300" />
       <div id='about'>
         <About />
       </div>
-      <hr className="w-3/4 mx-auto border-gray-300" />
       <div id='skills'>
         <Skills />
       </div>
-      <hr className="w-3/4 mx-auto border-gray-300" />
       <div>
         <Experience />
       </div>
-      <hr className="w-3/4 mx-auto border-gray-300" />
       <div id='project'>
         <Projects />
       </div>
-      <hr className="w-3/4 mx-auto border-gray-300" />
       <div id='contact'>
         <Contact />
       </div>
+      <FloatingThemeToggle />
     </>
   );
 }

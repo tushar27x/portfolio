@@ -5,10 +5,13 @@ import { TypeAnimation } from 'react-type-animation'
 import { Card, CardContent } from "@/components/ui/card"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { motion } from "framer-motion"
+import { Button } from "@/components/ui/button"
+import { IoMdDownload } from "react-icons/io"
+import download from '@/app/utils/downloadResume'
 
 export default function Title() {
   return (
-    <div className="py-20 md:py-32 lg:py-40">
+    <div className="py-32 md:py-48 lg:py-56">
       <div className="container mx-auto px-4">
         <div className="bg-background/60 backdrop-blur-sm">
           <div className="p-6 md:px-28 md:py-16">
@@ -34,8 +37,6 @@ export default function Title() {
                       'Full Stack Developer',
                       1000,
                       'Software Engineer',
-                      1000,
-                      'MERN Stack Developer',
                       1000
                     ]}
                     wrapper="span"
@@ -43,6 +44,15 @@ export default function Title() {
                     className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary"
                     repeat={Infinity}
                   />
+                </div>
+                <div className="flex justify-center md:justify-start mt-6">
+                  <Button 
+                    onClick={download}
+                    className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-lg transition-all duration-200 hover:scale-105 shadow-lg"
+                  >
+                    Download Resume
+                    <IoMdDownload size={20}/>
+                  </Button>
                 </div>
               </div>
             </div>

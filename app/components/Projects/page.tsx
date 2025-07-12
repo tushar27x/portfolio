@@ -5,45 +5,93 @@ import Reveal from '../Reveal';
 import Link from 'next/link';
 import PhotoPop from '../PhotoPop';
 import projects from '@/app/utils/projects';
-import { Github, TvMinimalPlay  } from 'lucide-react';
+import { Github, ExternalLink, Code } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+interface ProjectProps {
+  id: number | string,
+  title: string,
+  imageUrl: string,
+  gitHubUrl: string,
+  liveUrl?: string
+}
 const Projects = () => {
   return (
-    <div className='p-[6rem]'>
-      <div className='flex flex-col items-center gap-[2rem]'>
-        <div>
-          <h1 className='text-3xl font-bold'>PROJECTS</h1>
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
+      <div className="container mx-auto px-4 py-16 md:py-24">
         <Reveal>
-          <div className='flex flex-col items-center w-full gap-5 md:flex-row md:gap-[5rem] lg:flex-row lg:gap-[8rem]'>
-            {
-              projects.map((project) =>{
-                return( 
-                  <div key={project.id} className='w-full text-center'>
-                    <div className='flex justify-between'>
-                      <h3 className='font-semibold text-1xl'>{project.title}</h3>
-                      <div className='flex gap-4 justify-between'>
-                        <div className='hover:opacity-50'>
-                          <Link href={project.gitHubUrl}><Github size={20}/></Link>
-                        </div>
-                        <div className='hover:opacity-50'>
-                          {project.liveUrl && <Link href={project.liveUrl}><TvMinimalPlay size={20}/></Link>}
-                        </div>
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+              PROJECTS
+            </h1>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto mt-4 rounded-full"></div>
+          </div>
+        </Reveal>
+
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-7xl mx-auto">
+          {projects.map((project: ProjectProps) => (
+            <Reveal key={project.id}>
+              <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm hover:shadow-xl transition-all duration-300 h-full group">
+                <CardHeader className="p-6 pb-4">
+                  <div className="flex items-start justify-between">
+                    <div className="flex-1">
+                      <CardTitle className="text-xl md:text-2xl font-bold text-foreground mb-2">
+                        {project.title}
+                      </CardTitle>
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <Code className="w-4 h-4" />
+                        <span>Full Stack Project</span>
                       </div>
                     </div>
-                    <div className='flex flex-col items-center py-5'>
-                      <div className={`border-[8px] `}>
-                        <PhotoPop>
-                          <Image src={project.imageUrl} width={800} height={0} alt="project-ss" />
-                        </PhotoPop>
-                      </div>
-                      
+                    <div className="flex gap-3">
+                      <Link 
+                        href={project.gitHubUrl} 
+                        target="_blank"
+                        className="p-2 rounded-lg hover:bg-muted/50 transition-colors duration-200"
+                      >
+                        <Github size={20} className="text-foreground hover:text-primary transition-colors" />
+                      </Link>
+                      {project?.liveUrl && (
+                        <Link 
+                          href={project.liveUrl} 
+                          target="_blank"
+                          className="p-2 rounded-lg hover:bg-muted/50 transition-colors duration-200"
+                        >
+                          <ExternalLink size={20} className="text-foreground hover:text-primary transition-colors" />
+                        </Link>
+                      )}
                     </div>
                   </div>
-                )
-              })
-            }
-        </div>   
-        </Reveal>
+                </CardHeader>
+                
+                <CardContent className="p-6 pt-0">
+                  <div className="space-y-4">
+                    <div className="relative overflow-hidden rounded-lg border border-border/50">
+                      <PhotoPop>
+                        <div className="relative aspect-video overflow-hidden">
+                          <Image 
+                            src={project.imageUrl} 
+                            alt={`${project.title} screenshot`}
+                            fill
+                            className="object-cover transition-transform duration-300 group-hover:scale-105"
+                          />
+                        </div>
+                      </PhotoPop>
+                    </div>
+                    
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="outline" className="text-xs">React</Badge>
+                      <Badge variant="outline" className="text-xs">Next.js</Badge>
+                      <Badge variant="outline" className="text-xs">TypeScript</Badge>
+                      <Badge variant="outline" className="text-xs">Tailwind CSS</Badge>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </Reveal>
+          ))}
+        </div>
+
       </div>
     </div>
   )
