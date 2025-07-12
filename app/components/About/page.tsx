@@ -124,7 +124,7 @@ const About = () => {
                 <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
                   Currently working as a <strong className="text-primary">Full Stack Developer</strong> at{' '}
                   <strong className="text-primary">Salescode.ai</strong>, where I work with <strong className="text-primary">Java</strong>, <strong className="text-primary">React</strong>, <strong className="text-primary">Elasticsearch</strong>, <strong className="text-primary">MySQL</strong>, and <strong className="text-primary">Node.js</strong> to build KPI dashboards and analytics solutions. 
-                  I'm passionate about creating seamless user experiences and embracing new challenges in the tech industry.
+                  I&apos;m passionate about creating seamless user experiences and embracing new challenges in the tech industry.
                 </p>
                 <div className="flex justify-center gap-4 pt-4">
                   <Badge variant="outline" className="text-sm">Problem Solving</Badge>
