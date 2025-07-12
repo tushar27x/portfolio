@@ -23,7 +23,7 @@ export default function Title() {
                 className="w-48 h-48 md:w-64 md:h-64"
               >
                 <Avatar className="w-full h-full">
-                  <AvatarImage src="/profile-rounded.png" alt="Tushar Sharma" />
+                  <AvatarImage src="/profile-rounded.jpg" alt="Tushar Sharma" />
                   <AvatarFallback>TS</AvatarFallback>
                 </Avatar>
               </motion.div>
