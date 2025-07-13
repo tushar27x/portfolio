@@ -41,8 +41,10 @@ const Contact = () => {
       <div className="container mx-auto px-4 py-16 md:py-24">
         <Reveal>
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-              CONTACT
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold flex items-center justify-center gap-4">
+              <span className="text-4xl md:text-5xl lg:text-6xl">📧</span>
+              <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">CONTACT</span>
+              <span className="text-4xl md:text-5xl lg:text-6xl">🤝</span>
             </h1>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto mt-4 rounded-full"></div>
           </div>
