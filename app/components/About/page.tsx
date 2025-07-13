@@ -13,12 +13,14 @@ const About = () => {
         <Reveal>
           <div className="text-center mb-16">
             <motion.h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold flex items-center justify-center gap-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              ABOUT ME
+              <span className="text-4xl md:text-5xl lg:text-6xl">👨‍💻</span>
+              <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">ABOUT ME</span>
+              <span className="text-4xl md:text-5xl lg:text-6xl">🎯</span>
             </motion.h1>
             <motion.div 
               className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto mt-4 rounded-full"

@@ -12,11 +12,11 @@ export default function Navbar() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
       
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // Scrolling down
+      // Only hide when scrolling down and past the top
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
         setIsVisible(false)
-      } else {
-        // Scrolling up
+      } else if (currentScrollY <= lastScrollY || currentScrollY <= 50) {
+        // Show when scrolling up or at the top
         setIsVisible(true)
       }
       
@@ -37,8 +37,8 @@ export default function Navbar() {
         <NavLink href="#home">Home</NavLink>
         <NavLink href="#about">About</NavLink>
         <NavLink href="#skills">Skills</NavLink>
-        <NavLink href="#project">Projects</NavLink>
         <NavLink href='#experience'>Experience</NavLink>
+        <NavLink href="#project">Projects</NavLink>
         <NavLink href="#contact">Contact</NavLink>
       </div>
     </nav>
