@@ -13,7 +13,8 @@ interface ProjectProps {
   title: string,
   imageUrl: string,
   gitHubUrl: string,
-  liveUrl?: string
+  liveUrl?: string,
+  tech: string[] 
 }
 const Projects = () => {
   return (
@@ -40,10 +41,6 @@ const Projects = () => {
                       <CardTitle className="text-xl md:text-2xl font-bold text-foreground mb-2">
                         {project.title}
                       </CardTitle>
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <Code className="w-4 h-4" />
-                        <span>Full Stack Project</span>
-                      </div>
                     </div>
                     <div className="flex gap-3">
                       <Link 
@@ -82,10 +79,12 @@ const Projects = () => {
                     </div>
                     
                     <div className="flex flex-wrap gap-2">
-                      <Badge variant="outline" className="text-xs">React</Badge>
-                      <Badge variant="outline" className="text-xs">Next.js</Badge>
-                      <Badge variant="outline" className="text-xs">TypeScript</Badge>
-                      <Badge variant="outline" className="text-xs">Tailwind CSS</Badge>
+                    {project.tech?.map(t => {
+                        return(
+                            <Badge variant="outline" className="text-xs">{t}</Badge>
+                        )
+                    })
+                    }
                     </div>
                   </div>
                 </CardContent>
