@@ -34,7 +34,7 @@ const Projects = () => {
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-7xl mx-auto">
           {projects.map((project: ProjectProps) => (
             <Reveal key={project.id}>
-              <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm hover:shadow-xl transition-all duration-300 h-full group">
+              <Card className="border border-border/50 shadow-md rounded-lg bg-card/70  transition-all duration-300 h-full group">
                 <CardHeader className="p-6 pb-4">
                   <div className="flex items-start justify-between">
                     <div className="flex-1">

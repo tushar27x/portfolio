@@ -33,7 +33,7 @@ const Skills = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 max-w-7xl mx-auto mb-16">
           {Object.entries(skills).map(([category, skillList], index) => (
             <Reveal key={category}>
-              <Card className="border-0 bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm transition-all duration-500 rounded-2xl">
+              <Card className="border-0 bg-gradient-to-br from-card/80 to-card/40 transition-all duration-500 rounded-2xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl pointer-events-none" />
                 <CardContent className="p-8 relative z-10">
                   <div className="space-y-6">

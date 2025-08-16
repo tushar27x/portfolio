@@ -53,7 +53,7 @@ const Contact = () => {
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
           {/* Contact Info Card */}
           <Reveal>
-            <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm hover:shadow-xl transition-all duration-300">
+            <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm transition-all duration-300">
               <CardContent className="p-8">
                 <div className="space-y-6">
                   <div className="text-center md:text-left">
@@ -103,7 +103,7 @@ const Contact = () => {
 
           {/* Social Links Card */}
           <Reveal>
-            <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm hover:shadow-xl transition-all duration-300">
+            <Card className="border-0 bg-card/50  transition-all duration-300">
               <CardContent className="p-8">
                 <div className="space-y-6">
                   <div className="text-center md:text-left">

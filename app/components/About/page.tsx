@@ -34,7 +34,7 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto items-stretch">
           {/* Personal Info Card */}
           <Reveal>
-            <div className="border-0 bg-card/50 backdrop-blur-sm transition-all duration-300 h-full flex shadow-md rounded-lg">
+            <div className="border-0 bg-card/50 transition-all duration-300 h-full flex rounded-lg">
               <div className="p-6 h-full flex flex-col flex-1">
                 <div className="space-y-6 flex-1">
                   <div className="text-center lg:text-left">
@@ -65,7 +65,7 @@ const About = () => {
 
           {/* Skills & Expertise Card */}
           <Reveal>
-            <div className="border-0 shadow-lg bg-card/50 backdrop-blur-sm hover:shadow-xl rounded-lg transition-all duration-300 h-full flex">
+            <div className="border-0 bg-card/50 rounded-lg transition-all duration-300 h-full flex">
               <div className="p-6 h-full flex flex-col flex-1">
                 <div className="space-y-4 flex-1">
                   <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">Technical Expertise</h3>
