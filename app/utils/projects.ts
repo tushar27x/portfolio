@@ -7,7 +7,6 @@ interface Project {
     liveUrl?: string;
     tech: string[];
     category: 'backend' | 'frontend' | 'fullstack' | 'cli';
-    featured: boolean;
     status: 'completed' | 'in-progress' | 'archived';
 }
 
@@ -21,7 +20,6 @@ const projects: Project[] = [
         liveUrl: 'https://tushar27x-portfolio.vercel.app/',
         tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Vercel"],
         category: 'frontend',
-        featured: true,
         status: 'completed'
     },
     {
@@ -33,7 +31,6 @@ const projects: Project[] = [
         liveUrl: 'https://independent-carlene-tushar27x-a3461680.koyeb.app/swagger/index.html',
         tech: ["Go", "Gin", "GORM", "PostgreSQL", "Swagger", "JWT", "Docker"],
         category: 'backend',
-        featured: true,
         status: 'completed'
     },
     {
@@ -42,10 +39,8 @@ const projects: Project[] = [
         description: 'A real-time collaborative code editor inspired by CodePen. Features live preview, syntax highlighting, multiple language support, and responsive design. Perfect for prototyping and sharing code snippets.',
         imageUrl: '/codepen.png',
         gitHubUrl: 'https://github.com/Tushar27x/codepen-clone',
-        liveUrl: 'https://codepen-clone-tushar27x.vercel.app/',
         tech: ["React.js", "JavaScript", "Material-UI", "Monaco Editor", "Vercel"],
         category: 'frontend',
-        featured: true,
         status: 'completed'
     },
     {
@@ -54,10 +49,8 @@ const projects: Project[] = [
         description: 'A full-stack blog platform with user authentication, real-time updates, and rich text editing. Features include user profiles, article publishing, comments, and responsive design.',
         imageUrl: '/blogs.png',
         gitHubUrl: 'https://github.com/Tushar27x/medium-clone',
-        liveUrl: 'https://medium-clone-tushar27x.vercel.app/',
         tech: ["Next.js", "TypeScript", "Tailwind CSS", "Firebase", "Vercel"],
         category: 'fullstack',
-        featured: true,
         status: 'completed'
     },
     {
@@ -68,7 +61,6 @@ const projects: Project[] = [
         gitHubUrl: 'https://github.com/tushar27x/go-CLI',
         tech: ["Go", "CLI", "System Programming", "File I/O"],
         category: 'cli',
-        featured: false,
         status: 'completed'
     },
     {
@@ -77,10 +69,8 @@ const projects: Project[] = [
         description: 'A full-stack Airbnb clone with property listings, user authentication, booking system, and interactive maps. Features responsive design, real-time updates, and comprehensive property management.',
         imageUrl: '/airbnb-clone.png',
         gitHubUrl: 'https://github.com/Tushar27x/airbnb',
-        liveUrl: 'https://airbnb-clone-tushar27x.vercel.app/',
         tech: ["Next.js", "TypeScript", "Tailwind CSS", "MongoDB", "Prisma", "NextAuth"],
         category: 'fullstack',
-        featured: true,
         status: 'completed'
     }
 ];
