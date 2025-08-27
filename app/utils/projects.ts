@@ -39,12 +39,24 @@ const projects: Project[] = [
         description: 'A real-time collaborative code editor inspired by CodePen. Features live preview, syntax highlighting, multiple language support, and responsive design. Perfect for prototyping and sharing code snippets.',
         imageUrl: '/codepen.png',
         gitHubUrl: 'https://github.com/Tushar27x/codepen-clone',
+        liveUrl: 'https://tushar27x-codepen-clone.netlify.app/',
         tech: ["React.js", "JavaScript", "Material-UI", "Monaco Editor", "Vercel"],
         category: 'frontend',
         status: 'completed'
     },
     {
         id: 4,
+        title: 'URL Shortener',
+        description: 'A lightweight and efficient URL shortening service built with Go and Gin framework. Features include generating unique short codes for long URLs, redirect handling, and prevention of duplicate entries by mapping the same long URL to a consistent short code. The project uses SQLite with GORM for persistence and includes a simple frontend for easy usage.',
+        imageUrl: '/urlshortener.png',
+        gitHubUrl: 'https://github.com/tushar27x/url-shortner',
+        liveUrl: 'https://shorturl-1b4q.onrender.com/',
+        tech: ["Go", "Gin", "GORM", "SQLite", "HTML", "CSS"],
+        category: 'backend',
+        status: 'completed'
+    },
+    {
+        id: 5,
         title: 'Blog Platform',
         description: 'A full-stack blog platform with user authentication, real-time updates, and rich text editing. Features include user profiles, article publishing, comments, and responsive design.',
         imageUrl: '/blogs.png',
@@ -54,7 +66,7 @@ const projects: Project[] = [
         status: 'completed'
     },
     {
-        id: 5,
+        id: 6,
         title: 'Personal Shell',
         description: 'A custom command-line interface built in Go. Features include command history, file system navigation, process management, and custom command execution. Demonstrates low-level system programming concepts.',
         imageUrl: '/go-shell.png',
@@ -64,7 +76,7 @@ const projects: Project[] = [
         status: 'completed'
     },
     {
-        id: 6,
+        id: 7,
         title: 'Airbnb Clone',
         description: 'A full-stack Airbnb clone with property listings, user authentication, booking system, and interactive maps. Features responsive design, real-time updates, and comprehensive property management.',
         imageUrl: '/airbnb-clone.png',
