@@ -12,14 +12,13 @@ interface Project {
 
 const projects: Project[] = [
     {
-        id: 1,
-        title: 'Personal Portfolio',
-        description: 'A modern, responsive portfolio website built with Next.js and TypeScript. Features include dark/light mode, smooth animations, project showcase, and contact form. Demonstrates clean code architecture and modern web development practices.',
-        imageUrl: '/portfolio.png',
-        gitHubUrl: 'https://github.com/tushar27x/portfolio',
-        liveUrl: 'https://tushar27x-portfolio.vercel.app/',
-        tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Vercel"],
-        category: 'frontend',
+        id: 8,
+        title: 'Event Processing Platform',
+        description: 'A production-style Kafka-based event processing system built with Spring Boot, PostgreSQL, Redis, Prometheus, and Grafana.',
+        imageUrl: '/realtime.png',
+        gitHubUrl: 'https://github.com/tushar27x/kafka-event-processing-platform',
+        tech: ["Java", "Spring Boot", "PostgreSQL", "Redis", "Kafka", "Prometheus", "Grafana"],
+        category: 'backend',
         status: 'completed'
     },
     {
@@ -34,17 +33,6 @@ const projects: Project[] = [
         status: 'completed'
     },
     {
-        id: 3,
-        title: 'Online Code Editor',
-        description: 'A real-time collaborative code editor inspired by CodePen. Features live preview, syntax highlighting, multiple language support, and responsive design. Perfect for prototyping and sharing code snippets.',
-        imageUrl: '/codepen.png',
-        gitHubUrl: 'https://github.com/Tushar27x/codepen-clone',
-        liveUrl: 'https://tushar27x-codepen-clone.netlify.app/',
-        tech: ["React.js", "JavaScript", "Material-UI", "Monaco Editor", "Vercel"],
-        category: 'frontend',
-        status: 'completed'
-    },
-    {
         id: 4,
         title: 'URL Shortener',
         description: 'A lightweight and efficient URL shortening service built with Go and Gin framework. Features include generating unique short codes for long URLs, redirect handling, and prevention of duplicate entries by mapping the same long URL to a consistent short code. The project uses SQLite with GORM for persistence and includes a simple frontend for easy usage.',
@@ -53,16 +41,6 @@ const projects: Project[] = [
         liveUrl: 'https://shorturl-1b4q.onrender.com/',
         tech: ["Go", "Gin", "GORM", "SQLite", "HTML", "CSS"],
         category: 'backend',
-        status: 'completed'
-    },
-    {
-        id: 5,
-        title: 'Blog Platform',
-        description: 'A full-stack blog platform with user authentication, real-time updates, and rich text editing. Features include user profiles, article publishing, comments, and responsive design.',
-        imageUrl: '/blogs.png',
-        gitHubUrl: 'https://github.com/Tushar27x/medium-clone',
-        tech: ["Next.js", "TypeScript", "Tailwind CSS", "Firebase", "Vercel"],
-        category: 'fullstack',
         status: 'completed'
     },
     {
@@ -75,16 +53,6 @@ const projects: Project[] = [
         category: 'cli',
         status: 'completed'
     },
-    {
-        id: 7,
-        title: 'Airbnb Clone',
-        description: 'A full-stack Airbnb clone with property listings, user authentication, booking system, and interactive maps. Features responsive design, real-time updates, and comprehensive property management.',
-        imageUrl: '/airbnb-clone.png',
-        gitHubUrl: 'https://github.com/Tushar27x/airbnb',
-        tech: ["Next.js", "TypeScript", "Tailwind CSS", "MongoDB", "Prisma", "NextAuth"],
-        category: 'fullstack',
-        status: 'completed'
-    }
 ];
 
 export default projects;
