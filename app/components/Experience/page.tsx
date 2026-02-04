@@ -1,42 +1,10 @@
-"use client"
+"use client";
 
-import ExperienceCard from "./ExperienceCard"
-import Reveal from "../Reveal"
+import ExperienceCard from "./ExperienceCard";
+import Reveal from "../Reveal";
+import experiences from "@/app/utils/experience";
 
 export default function ExperienceSection() {
-  const experiences = [
-    {
-      companyName: "Salescode.ai",
-      logoUrl: "/salescode.png",
-      position: "Software Engineer Trainee",
-      startDate: "Aug 2024",
-      endDate: "Feb 2025",
-      description:
-        "Started as a trainee, learning the company's tech stack and contributing to development projects while gaining hands-on experience.",
-      responsibilities: [
-        "Learning and implementing modern JavaScript frameworks",
-        "Assisting in web application development and maintenance",
-        "Participating in team meetings and technical discussions",
-        "Learning best practices in software development",
-      ],
-    },
-    {
-      companyName: "Salescode.ai",
-      logoUrl: "/salescode.png",
-      position: "Software Engineer",
-      startDate: "Feb 2025",
-      endDate: "Present",
-      description:
-        "Working on KPI dashboards and analytics solutions, contributing to the development of features that enhance sales team productivity and effectiveness.",
-      responsibilities: [
-        "Developing and maintaining web applications using Java, React, and Node.js",
-        "Building KPI dashboards with Elasticsearch and MySQL",
-        "Collaborating with cross-functional teams to implement new features",
-        "Participating in code reviews and technical discussions",
-      ],
-    },
-  ]
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20 relative overflow-hidden">
       {/* Background Mountains */}
@@ -77,9 +45,6 @@ export default function ExperienceSection() {
               <div className="text-4xl">🥾</div>
             </div>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto mt-4 rounded-full"></div>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-6">
-              A comprehensive overview of my professional growth and career progression in software development
-            </p>
           </div>
         </Reveal>
 
@@ -111,10 +76,28 @@ export default function ExperienceSection() {
               style={{ height: `${experiences.length * 400 + 200}px` }}
             >
               <defs>
-                <linearGradient id="trailGradient" x1="0%" y1="100%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.4" />
-                  <stop offset="50%" stopColor="hsl(var(--primary))" stopOpacity="0.6" />
-                  <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.8" />
+                <linearGradient
+                  id="trailGradient"
+                  x1="0%"
+                  y1="100%"
+                  x2="100%"
+                  y2="0%"
+                >
+                  <stop
+                    offset="0%"
+                    stopColor="hsl(var(--primary))"
+                    stopOpacity="0.4"
+                  />
+                  <stop
+                    offset="50%"
+                    stopColor="hsl(var(--primary))"
+                    stopOpacity="0.6"
+                  />
+                  <stop
+                    offset="100%"
+                    stopColor="hsl(var(--primary))"
+                    stopOpacity="0.8"
+                  />
                 </linearGradient>
               </defs>
               <path
@@ -130,9 +113,13 @@ export default function ExperienceSection() {
             {experiences && experiences.length > 0 ? (
               experiences.map((experience, index) => (
                 <Reveal key={index}>
-                  <div className={`relative mb-16 md:mb-24 flex ${index % 2 === 0 ? "justify-start" : "justify-end"}`}>
+                  <div
+                    className={`relative mb-16 md:mb-24 flex ${index % 2 === 0 ? "justify-start" : "justify-end"}`}
+                  >
                     {/* Trail Marker with Elevation */}
-                    <div className={`absolute ${index % 2 === 0 ? "left-8 md:left-16" : "right-8 md:right-16"} top-8`}>
+                    <div
+                      className={`absolute ${index % 2 === 0 ? "left-8 md:left-16" : "right-8 md:right-16"} top-8`}
+                    >
                       <div className="relative">
                         {/* Flag Pole */}
                         <div className="w-1 h-16 bg-gradient-to-t from-primary/60 to-primary mx-auto"></div>
@@ -160,12 +147,17 @@ export default function ExperienceSection() {
                         <div
                           className={`absolute -top-4 ${index % 2 === 0 ? "-left-4" : "-right-4"} w-12 h-12 bg-gradient-to-br from-primary/90 to-primary rounded-full flex items-center justify-center shadow-lg transform group-hover:rotate-12 transition-transform duration-300 z-10`}
                         >
-                          <span className="text-2xl">{index === 0 ? "🎯" : index === 1 ? "🏆" : "⭐"}</span>
+                          <span className="text-2xl">
+                            {index === 0 ? "🎯" : index === 1 ? "🏆" : "⭐"}
+                          </span>
                         </div>
 
                         {/* Experience Card with Adventure Styling */}
                         <div className="transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
-                          <ExperienceCard {...experience} timelinePosition={index + 1} />
+                          <ExperienceCard
+                            {...experience}
+                            timelinePosition={index + 1}
+                          />
                         </div>
 
                         {/* Trail Elements - Different for each position */}
@@ -188,7 +180,9 @@ export default function ExperienceSection() {
               <Reveal>
                 <div className="text-center py-16">
                   <div className="text-6xl mb-4">🗺️</div>
-                  <p className="text-muted-foreground text-lg">The adventure map is being drawn...</p>
+                  <p className="text-muted-foreground text-lg">
+                    The adventure map is being drawn...
+                  </p>
                 </div>
               </Reveal>
             )}
@@ -206,13 +200,17 @@ export default function ExperienceSection() {
                     <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
                       <div className="w-1 h-12 bg-primary"></div>
                       <div className="absolute top-0 left-1 w-8 h-6 bg-gradient-to-r from-primary to-primary/80 clip-path-flag">
-                        <div className="text-primary-foreground text-xs font-bold text-center leading-6">🚀</div>
+                        <div className="text-primary-foreground text-xs font-bold text-center leading-6">
+                          🚀
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div className="mt-6 inline-flex items-center gap-3 px-6 py-3 bg-primary/10 rounded-full border border-primary/20 backdrop-blur-sm">
                     <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
-                    <span className="text-sm font-medium text-primary">The adventure continues...</span>
+                    <span className="text-sm font-medium text-primary">
+                      The adventure continues...
+                    </span>
                     <div className="text-lg">🌟</div>
                   </div>
                 </div>
@@ -224,8 +222,13 @@ export default function ExperienceSection() {
 
       <style jsx>{`
         @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-10px); }
+          0%,
+          100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
         }
         .animate-float {
           animation: float 6s ease-in-out infinite;
@@ -238,5 +241,5 @@ export default function ExperienceSection() {
         }
       `}</style>
     </div>
-  )
+  );
 }

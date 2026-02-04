@@ -1,15 +1,26 @@
-import React from 'react'
-import Reveal from '../Reveal';
+import React from "react";
+import Reveal from "../Reveal";
 
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
 
 const skills = {
-  "Programming Languages": ["JavaScript", "Java", "C++", "Go"],
-  "Frontend Development": ["HTML", "CSS", "React.js", "Next.js"],
-  "Backend Development": ["Node.js", "Express.js", "Gin"],
-  "Databases & Search": ["MongoDB", "SQL", "Elasticsearch"],
-  "Tools & Practices": ["Git", "Docker", "REST APIs", "Agile"]
+  Languages: ["Java", "Go (Golang)", "JavaScript"],
+  "Backend & APIs": [
+    "REST APIs",
+    "Spring Boot",
+    "Gin",
+    "JWT Authentication",
+    "Microservices",
+  ],
+  "Databases & Search": ["MySQL", "PostgreSQL", "Elasticsearch"],
+  "Data & Messaging": [
+    "Apache Kafka",
+    "Real-time Event Processing",
+    "Analytics Pipelines",
+  ],
+  Frontend: ["React.js", "Next.js", "Tailwind CSS"],
+  "Tools & DevOps": ["Jenkins", "Docker", "Git", "CI/CD"],
 };
 
 const Skills = () => {
@@ -20,11 +31,14 @@ const Skills = () => {
           <div className="text-center mb-20">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 flex items-center justify-center gap-4">
               <span className="text-4xl md:text-5xl lg:text-6xl">⚙️</span>
-              <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">SKILLS</span>
+              <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+                SKILLS
+              </span>
               <span className="text-4xl md:text-5xl lg:text-6xl">🛠️</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              A comprehensive toolkit of technologies and practices that drive modern software development
+              A comprehensive toolkit of technologies and practices that drive
+              modern software development
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto mt-6 rounded-full"></div>
           </div>
@@ -38,15 +52,17 @@ const Skills = () => {
                 <CardContent className="p-8 relative z-10">
                   <div className="space-y-6">
                     <div className="text-center">
-                      <h3 className="text-lg md:text-xl font-semibold text-foreground mb-3">{category}</h3>
+                      <h3 className="text-lg md:text-xl font-semibold text-foreground mb-3">
+                        {category}
+                      </h3>
                       <div className="w-12 h-0.5 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full"></div>
                     </div>
-                    
+
                     <div className="flex flex-wrap gap-2 justify-center">
                       {skillList.map((skill) => (
-                        <Badge 
-                          key={skill} 
-                          variant="secondary" 
+                        <Badge
+                          key={skill}
+                          variant="secondary"
                           className="text-sm py-1.5 px-3 rounded-full hover:scale-105 transition-transform duration-200"
                         >
                           {skill}
@@ -57,13 +73,11 @@ const Skills = () => {
                 </CardContent>
               </Card>
             </Reveal>
-          
           ))}
         </div>
-
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Skills;
