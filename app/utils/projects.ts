@@ -17,7 +17,7 @@ const projects: Project[] = [
         description: 'An AI-powered web app that transforms your GitHub activity into a cinematic, story-style dashboard with insights, analytics, and witty developer roasts.',
         imageUrl: '/insight_hub.png',
         gitHubUrl: 'https://github.com/tushar27x/insight_hub',
-        liveUrl: '32',
+        liveUrl: 'https://insight-hub-nu.vercel.app/',
         tech: ["Python", "Fast API", "PostgreSQL", "Redis", "Kafka", "Groq", "Gemini", "GraphQL", "Next.js"],
         category: 'fullstack',
         status: 'completed'
