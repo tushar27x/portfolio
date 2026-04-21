@@ -6,11 +6,12 @@ import { Terminal, Cpu, Network, Mail, Github, Linkedin, MessageSquare } from 'l
 
 const Contact = () => {
   const [timestamp, setTimestamp] = useState('');
+  const displayTimestamp = timestamp || '--:--:--';
 
   useEffect(() => {
-    setTimestamp(new Date().toISOString());
+    setTimestamp(new Date().toLocaleTimeString());
     const interval = setInterval(() => {
-      setTimestamp(new Date().toISOString());
+      setTimestamp(new Date().toLocaleTimeString());
     }, 1000);
     return () => clearInterval(interval);
   }, []);
@@ -26,14 +27,14 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <Reveal>
           <div className="flex items-center gap-4 mb-12">
-            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center border border-primary/20">
+            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center border border-primary/20 shrink-0">
               <Terminal className="text-primary" />
             </div>
-            <div>
-              <h2 className="text-3xl font-black tracking-tighter uppercase">Connect.exe</h2>
-              <div className="flex items-center gap-2 text-[10px] text-muted-foreground font-mono">
-                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                SYSTEM STATUS: ACTIVE | {timestamp}
+            <div className="min-w-0">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tighter uppercase truncate">Connect.exe</h2>
+              <div className="flex items-center gap-2 text-[10px] text-muted-foreground font-mono overflow-hidden">
+                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse shrink-0" />
+                <span className="truncate">SYSTEM STATUS: ACTIVE | {displayTimestamp}</span>
               </div>
             </div>
           </div>
@@ -50,22 +51,26 @@ const Contact = () => {
                     <div className="w-3 h-3 rounded-full bg-yellow-500/50" />
                     <div className="w-3 h-3 rounded-full bg-green-500/50" />
                   </div>
-                  <div className="text-[10px] text-muted-foreground uppercase tracking-widest font-bold">
+                  <div className="text-[10px] text-muted-foreground uppercase tracking-widest font-bold truncate ml-4">
                     message_handler.ts
                   </div>
                 </div>
-                <div className="p-8 font-mono text-sm md:text-base">
+                <div className="p-4 sm:p-8 font-mono text-xs sm:text-sm md:text-base overflow-hidden">
                   <div className="flex gap-4">
                     <span className="text-muted-foreground/30 select-none">01</span>
                     <p><span className="text-primary">const</span> <span className="text-blue-400">contact</span> = &#123;</p>
                   </div>
                   <div className="flex gap-4">
                     <span className="text-muted-foreground/30 select-none">02</span>
-                    <p className="pl-4 text-muted-foreground">email: <span className="text-green-400">&apos;sharma.tushar.271003@gmail.com&apos;</span>,</p>
+                    <p className="pl-4 text-muted-foreground break-all">
+                      email: <span className="text-green-400">&apos;sharma.tushar.271003@gmail.com&apos;</span>,
+                    </p>
                   </div>
                   <div className="flex gap-4">
                     <span className="text-muted-foreground/30 select-none">03</span>
-                    <p className="pl-4 text-muted-foreground">status: <span className="text-green-400">&apos;open_to_work&apos;</span>,</p>
+                    <p className="pl-4 text-muted-foreground break-all">
+                      status: <span className="text-green-400">&apos;open_to_work&apos;</span>,
+                    </p>
                   </div>
                   <div className="flex gap-4">
                     <span className="text-muted-foreground/30 select-none">04</span>
@@ -80,16 +85,16 @@ const Contact = () => {
                     <p className="text-primary animate-pulse">_</p>
                   </div>
 
-                  <div className="mt-12 p-4 bg-white/5 rounded-lg border border-white/5">
+                  <div className="mt-12 p-4 bg-white/5 rounded-lg border border-white/5 overflow-hidden">
                     <h3 className="text-xs font-bold text-muted-foreground uppercase mb-4 flex items-center gap-2">
                       <Network size={12} /> System Logs
                     </h3>
                     <div className="space-y-1">
                       {logs.map((log, i) => (
-                        <div key={i} className="text-[10px] flex gap-4">
-                          <span className="text-muted-foreground">[{new Date().toLocaleTimeString()}]</span>
-                          <span className={log.type === 'SUCCESS' ? 'text-green-400' : 'text-blue-400'}>{log.type}</span>
-                          <span className="text-muted-foreground">{log.msg}</span>
+                        <div key={i} className="text-[10px] flex gap-4 overflow-hidden">
+                          <span className="text-muted-foreground shrink-0">[{displayTimestamp}]</span>
+                          <span className={`${log.type === 'SUCCESS' ? 'text-green-400' : 'text-blue-400'} shrink-0`}>{log.type}</span>
+                          <span className="text-muted-foreground truncate">{log.msg}</span>
                         </div>
                       ))}
                     </div>
@@ -116,13 +121,13 @@ const Contact = () => {
                       key={chan.name}
                       href={chan.href}
                       target="_blank"
-                      className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5 hover:border-primary/50 transition-all group"
+                      className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5 hover:border-primary/50 transition-all group gap-2"
                     >
-                      <div className="flex items-center gap-3">
-                        <chan.icon size={16} className="text-muted-foreground group-hover:text-primary transition-colors" />
-                        <span className="text-xs font-bold uppercase tracking-tight">{chan.name}</span>
+                      <div className="flex items-center gap-3 min-w-0">
+                        <chan.icon size={16} className="text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
+                        <span className="text-xs font-bold uppercase tracking-tight truncate">{chan.name}</span>
                       </div>
-                      <span className="text-[10px] text-muted-foreground font-mono">{chan.val}</span>
+                      <span className="text-[10px] text-muted-foreground font-mono truncate shrink-0">{chan.val}</span>
                     </Link>
                   ))}
                 </div>

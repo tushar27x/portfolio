@@ -11,7 +11,7 @@ export default function ExperienceSection() {
     <div className="min-h-screen py-24 relative overflow-hidden">
       {/* Background Decorative Tech Element */}
       <div className="absolute top-1/4 right-0 select-none pointer-events-none opacity-[0.02]">
-        <span className="text-[15vw] font-black font-mono">HISTORY_LOG</span>
+        <span className="text-[10vw] sm:text-[15vw] font-black font-mono">HISTORY_LOG</span>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -21,13 +21,14 @@ export default function ExperienceSection() {
               <History className="text-primary" />
             </div>
             <div className="text-center lg:text-left">
-              <h2 className="text-3xl font-black tracking-tighter uppercase">02_EXPERIENCE.EXE</h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tighter uppercase">02_EXPERIENCE.EXE</h2>
               <div className="flex items-center gap-2 text-[10px] text-muted-foreground font-mono">
                 PARSING DEPLOYMENT HISTORY... SUCCESS
               </div>
             </div>
           </div>
         </Reveal>
+...
 
         <div className="max-w-5xl mx-auto space-y-12">
           {experiences.map((exp, index) => (

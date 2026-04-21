@@ -20,64 +20,9 @@ export default function Title() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-12 gap-16 items-center">
             
-            {/* Left: Branding & Heading */}
-            <div className="lg:col-span-8 space-y-12">
-              <Reveal>
-                <div className="inline-flex flex-col gap-1">
-                  <div className="flex items-center gap-2 font-mono text-[9px] text-muted-foreground pl-11">
-                    <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-                    USER_ID: TS_27X // SHARMA, TUSHAR
-                  </div>
-                </div>
-              </Reveal>
-
-              <div className="space-y-8">
-                <motion.h1 
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="text-6xl md:text-8xl lg:text-[9rem] font-black tracking-tighter leading-[0.85] uppercase"
-                >
-                  SOFTWARE <br />
-                  <span className="text-stroke">ENGINEER.</span>
-                </motion.h1>
-                
-                <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-12">
-                   <div className="flex items-center gap-4 group">
-                      <div className="w-12 h-12 rounded-xl bg-primary/5 border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300">
-                        <Terminal size={20} className="text-primary" />
-                      </div>
-                      <div className="space-y-0.5">
-                        <div className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest">Entry_Point</div>
-                        <div className="text-base font-black uppercase tracking-tight">Full Stack Developer</div>
-                      </div>
-                   </div>
-
-                   <div className="flex items-center gap-4 group">
-                      <div className="w-12 h-12 rounded-xl bg-primary/5 border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300">
-                        <Cpu size={20} className="text-primary" />
-                      </div>
-                      <div className="space-y-0.5">
-                        <div className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest">Core_Module</div>
-                        <div className="text-base font-black uppercase tracking-tight">Scalable Systems</div>
-                      </div>
-                   </div>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-6 pt-6">
-                 <Button 
-                   onClick={download}
-                   className="flex items-center gap-4 bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-8 rounded-2xl transition-all duration-500 hover:scale-[1.02] shadow-[0_0_40px_rgba(var(--primary-rgb),0.2)] group"
-                 >
-                   <span className="text-sm font-black tracking-widest">COMPILE_PROFILE()</span>
-                   <IoMdDownload size={20} className="group-hover:translate-y-1 transition-transform" />
-                 </Button>
-              </div>
-            </div>
-
-            {/* Right: Technical Avatar Overlay */}
-            <div className="lg:col-span-4 relative flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-[400px] aspect-square">
+            {/* Right: Technical Avatar Overlay - Moved to top on mobile */}
+            <div className="lg:col-span-4 relative flex justify-center lg:justify-end order-first lg:order-last">
+              <div className="relative w-full max-w-[300px] sm:max-w-[400px] aspect-square">
                  {/* HUD Frame */}
                  <div className="absolute -inset-4 z-20 pointer-events-none border border-primary/20 rounded-[2.5rem] overflow-hidden">
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-primary/5" />
@@ -98,6 +43,61 @@ export default function Title() {
                      <AvatarFallback className="text-4xl font-black">TS</AvatarFallback>
                    </Avatar>
                  </div>
+              </div>
+            </div>
+
+            {/* Left: Branding & Heading - Center aligned on mobile */}
+            <div className="lg:col-span-8 space-y-12 flex flex-col items-center lg:items-start text-center lg:text-left order-last lg:order-first">
+              <Reveal>
+                <div className="inline-flex flex-col gap-1 items-center lg:items-start">
+                  <div className="flex items-center gap-2 font-mono text-[9px] text-muted-foreground lg:pl-11">
+                    <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                    USER_ID: TS_27X // SHARMA, TUSHAR
+                  </div>
+                </div>
+              </Reveal>
+
+              <div className="space-y-8 w-full">
+                <motion.h1 
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="text-6xl md:text-8xl lg:text-[9rem] font-black tracking-tighter leading-[0.85] uppercase text-foreground"
+                >
+                  SOFTWARE <br />
+                  <span className="text-stroke">ENGINEER.</span>
+                </motion.h1>
+                
+                <div className="flex flex-col md:flex-row items-center lg:items-start md:justify-center lg:justify-start gap-6 md:gap-12">
+                   <div className="flex items-center gap-4 group">
+                      <div className="w-12 h-12 rounded-xl bg-primary/5 border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300">
+                        <Terminal size={20} className="text-primary" />
+                      </div>
+                      <div className="space-y-0.5 text-left">
+                        <div className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest">Entry_Point</div>
+                        <div className="text-base font-black uppercase tracking-tight">Full Stack Developer</div>
+                      </div>
+                   </div>
+
+                   <div className="flex items-center gap-4 group">
+                      <div className="w-12 h-12 rounded-xl bg-primary/5 border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300">
+                        <Cpu size={20} className="text-primary" />
+                      </div>
+                      <div className="space-y-0.5 text-left">
+                        <div className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest">Core_Module</div>
+                        <div className="text-base font-black uppercase tracking-tight">Scalable Systems</div>
+                      </div>
+                   </div>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap justify-center lg:justify-start gap-6 pt-6">
+                 <Button 
+                   onClick={download}
+                   className="flex items-center gap-4 bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-8 rounded-2xl transition-all duration-500 hover:scale-[1.02] shadow-[0_0_40px_rgba(var(--primary-rgb),0.2)] group"
+                 >
+                   <span className="text-sm font-black tracking-widest">COMPILE_PROFILE()</span>
+                   <IoMdDownload size={20} className="group-hover:translate-y-1 transition-transform" />
+                 </Button>
               </div>
             </div>
 

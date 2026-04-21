@@ -27,10 +27,6 @@ export default function SideMenu({ isOpen, onClose }: SideMenuProps) {
             <NavLink href="#project" onClick={onClose}>Projects</NavLink>
             <NavLink href='#experience' onClick={onClose}>Experience</NavLink>
             <NavLink href="#contact" onClick={onClose}>Contact</NavLink>
-            <Button variant="ghost" className="justify-start" onClick={() => { download(); onClose(); }}>
-              Resume<IoMdDownload size={20}/>
-            </Button>
-            <ModeToggle />
           </nav>
         </ScrollArea>
       </SheetContent>

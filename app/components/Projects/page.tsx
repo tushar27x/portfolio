@@ -25,8 +25,8 @@ const Projects = () => {
     <div className="min-h-screen py-24 relative overflow-hidden">
       {/* Background Decorative Element */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full select-none pointer-events-none opacity-[0.02]">
-        <span className="text-[15vw] font-black font-mono absolute top-0 left-0">REPOS</span>
-        <span className="text-[15vw] font-black font-mono absolute bottom-0 right-0">BUILD</span>
+        <span className="text-[10vw] sm:text-[15vw] font-black font-mono absolute top-0 left-0">REPOS</span>
+        <span className="text-[10vw] sm:text-[15vw] font-black font-mono absolute bottom-0 right-0">BUILD</span>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -36,13 +36,14 @@ const Projects = () => {
               <Boxes className="text-primary" />
             </div>
             <div className="text-center lg:text-left">
-              <h2 className="text-3xl font-black tracking-tighter uppercase">03_REPOSITORIES.SYS</h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tighter uppercase">03_REPOSITORIES.SYS</h2>
               <div className="flex items-center gap-2 text-[10px] text-muted-foreground font-mono">
                 SCANNING LOCAL_STORAGE... {projects.length} PROJECTS FOUND
               </div>
             </div>
           </div>
         </Reveal>
+...
 
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-7xl mx-auto">
           {projects.map((project: any, index: number) => (

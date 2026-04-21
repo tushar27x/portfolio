@@ -11,7 +11,7 @@ const About = () => {
     <div className="min-h-screen py-24 relative overflow-hidden">
       {/* Decorative Background Text */}
       <div className="absolute top-1/2 left-4 -translate-y-1/2 select-none pointer-events-none opacity-[0.02] -rotate-90 origin-left">
-        <span className="text-[20vw] font-black font-mono">CORE_ENGINE</span>
+        <span className="text-[10vw] sm:text-[20vw] font-black font-mono">CORE_ENGINE</span>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -21,7 +21,7 @@ const About = () => {
               <Cpu className="text-primary" />
             </div>
             <div className="text-center lg:text-left">
-              <h2 className="text-3xl font-black tracking-tighter uppercase">01_PROFILE.MD</h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tighter uppercase">01_PROFILE.MD</h2>
               <div className="flex items-center gap-2 text-[10px] text-muted-foreground font-mono">
                 COMPILING SYSTEM ARCHITECTURE... 100%
               </div>

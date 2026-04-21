@@ -16,7 +16,7 @@ const Skills = () => {
     <div className="min-h-screen py-24 relative overflow-hidden">
       {/* Background ID Watermark */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 select-none pointer-events-none opacity-[0.02]">
-        <span className="text-[25vw] font-black font-mono leading-none">TECH.EXE</span>
+        <span className="text-[12vw] sm:text-[25vw] font-black font-mono leading-none">TECH.EXE</span>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -26,13 +26,14 @@ const Skills = () => {
               <Code2 className="text-primary" />
             </div>
             <div className="text-center lg:text-left">
-              <h2 className="text-3xl font-black tracking-tighter uppercase font-mono">04_SYSTEM_DEPENDENCIES</h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tighter uppercase font-mono">04_SYSTEM_DEPENDENCIES</h2>
               <div className="flex items-center gap-2 text-[10px] text-muted-foreground font-mono">
                 $ ls -la /usr/local/bin/skills/
               </div>
             </div>
           </div>
         </Reveal>
+...
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {Object.entries(detailedSkills).map(([category, skillList], index) => {
