@@ -12,6 +12,17 @@ interface Project {
 
 const projects: Project[] = [
     {
+        id: 9,
+        title: 'InsightsHub',
+        description: 'An AI-powered web app that transforms your GitHub activity into a cinematic, story-style dashboard with insights, analytics, and witty developer roasts.',
+        imageUrl: '/insight_hub.png',
+        gitHubUrl: 'https://github.com/tushar27x/insight_hub',
+        liveUrl: '32',
+        tech: ["Python", "Fast API", "PostgreSQL", "Redis", "Kafka", "Groq", "Gemini", "GraphQL", "Next.js"],
+        category: 'fullstack',
+        status: 'completed'
+    },
+    {
         id: 8,
         title: 'Event Processing Platform',
         description: 'A production-style Kafka-based event processing system built with Spring Boot, PostgreSQL, Redis, Prometheus, and Grafana.',
@@ -29,17 +40,6 @@ const projects: Project[] = [
         gitHubUrl: 'https://github.com/tushar27x/music-lib-api',
         liveUrl: 'https://independent-carlene-tushar27x-a3461680.koyeb.app/swagger/index.html',
         tech: ["Go", "Gin", "GORM", "PostgreSQL", "Swagger", "JWT", "Docker"],
-        category: 'backend',
-        status: 'completed'
-    },
-    {
-        id: 4,
-        title: 'URL Shortener',
-        description: 'A lightweight and efficient URL shortening service built with Go and Gin framework. Features include generating unique short codes for long URLs, redirect handling, and prevention of duplicate entries by mapping the same long URL to a consistent short code. The project uses SQLite with GORM for persistence and includes a simple frontend for easy usage.',
-        imageUrl: '/urlshortener.png',
-        gitHubUrl: 'https://github.com/tushar27x/url-shortner',
-        liveUrl: 'https://shorturl-1b4q.onrender.com/',
-        tech: ["Go", "Gin", "GORM", "SQLite", "HTML", "CSS"],
         category: 'backend',
         status: 'completed'
     },

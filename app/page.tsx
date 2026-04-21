@@ -9,27 +9,59 @@ import FloatingThemeToggle from './components/FloatingThemeToggle';
 
 export default function Home() {
   return (
-    <>  
+    <main className="relative min-h-screen overflow-x-hidden">
+      {/* Global Grain Overlay */}
+      <div className="fixed inset-0 pointer-events-none z-50 opacity-[0.03] bg-noise" />
+      
       <Navbar />
-      <div id='home'>
-        <Title />
+      
+      <div className="relative z-10 flex flex-col">
+        <section id="home" className="relative">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none pointer-events-none overflow-hidden w-full text-center">
+            <span className="text-[20vw] font-black text-stroke uppercase leading-none opacity-20">
+              Portfolio
+            </span>
+          </div>
+          <Title />
+        </section>
+        
+        <section id="about" className="relative overflow-hidden">
+          <div className="absolute -left-10 top-20 select-none pointer-events-none">
+            <span className="text-[15vw] font-black text-stroke uppercase leading-none opacity-10 rotate-90 origin-left">
+              About
+            </span>
+          </div>
+          <About />
+        </section>
+        
+        <section id="skills" className="relative">
+          <Skills />
+        </section>
+        
+        <section id="experience" className="relative overflow-hidden">
+           <div className="absolute -right-10 bottom-20 select-none pointer-events-none">
+            <span className="text-[15vw] font-black text-stroke uppercase leading-none opacity-10 -rotate-90 origin-right">
+              Journey
+            </span>
+          </div>
+          <Experience />
+        </section>
+        
+        <section id="project" className="relative">
+          <Projects />
+        </section>
+        
+        <section id="contact" className="relative overflow-hidden">
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 select-none pointer-events-none w-full text-center">
+            <span className="text-[15vw] font-black text-stroke uppercase leading-none opacity-10">
+              Connect
+            </span>
+          </div>
+          <Contact />
+        </section>
       </div>
-      <div id='about'>
-        <About />
-      </div>
-      <div id='skills'>
-        <Skills />
-      </div>
-      <div id='experience'>
-        <Experience />
-      </div>
-      <div id='project'>
-        <Projects />
-      </div>
-      <div id='contact'>
-        <Contact />
-      </div>
+
       <FloatingThemeToggle />
-    </>
+    </main>
   );
 }

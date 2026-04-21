@@ -3,163 +3,154 @@ import Reveal from "../Reveal"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { motion } from "framer-motion"
+import { Binary, Cpu, Layers, Workflow } from "lucide-react"
+import skills from "@/app/utils/skills"
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
-      <div className="container mx-auto px-4 py-16 md:py-24">
+    <div className="min-h-screen py-24 relative overflow-hidden">
+      {/* Decorative Background Text */}
+      <div className="absolute top-1/2 left-4 -translate-y-1/2 select-none pointer-events-none opacity-[0.02] -rotate-90 origin-left">
+        <span className="text-[20vw] font-black font-mono">CORE_ENGINE</span>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <Reveal>
-          <div className="text-center mb-16">
-            <motion.h1
-              className="text-3xl md:text-4xl lg:text-5xl font-bold flex items-center justify-center gap-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <span className="text-3xl md:text-4xl lg:text-5xl">👨‍💻</span>
-              <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-                ABOUT ME
-              </span>
-              <span className="text-3xl md:text-4xl lg:text-5xl">🎯</span>
-            </motion.h1>
-            <motion.div
-              className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto mt-4 rounded-full"
-              initial={{ width: 0 }}
-              animate={{ width: "6rem" }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            />
+          <div className="flex items-center gap-4 mb-16 justify-center lg:justify-start">
+            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center border border-primary/20">
+              <Cpu className="text-primary" />
+            </div>
+            <div className="text-center lg:text-left">
+              <h2 className="text-3xl font-black tracking-tighter uppercase">01_PROFILE.MD</h2>
+              <div className="flex items-center gap-2 text-[10px] text-muted-foreground font-mono">
+                COMPILING SYSTEM ARCHITECTURE... 100%
+              </div>
+            </div>
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto items-stretch">
-          {/* Personal Info Card */}
-          <Reveal>
-            <div className="border-0 bg-card/50 transition-all duration-300 h-full flex rounded-lg">
-              <div className="p-6 h-full flex flex-col flex-1">
-                <div className="space-y-6 flex-1">
-                  <div className="text-center lg:text-left">
-                    <h2 className="text-xl md:text-2xl font-bold mb-4 text-foreground">Tushar Sharma</h2>
-                    <p className="text-base text-muted-foreground mb-6 leading-relaxed">
-                      A passionate software engineer with expertise in full-stack web development.
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-7xl mx-auto">
+          {/* Main Bio Module */}
+          <div className="lg:col-span-8 space-y-8">
+            <Reveal>
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-transparent rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                <div className="relative p-8 md:p-12 rounded-3xl border border-white/10 bg-black/40 backdrop-blur-xl">
+                  <div className="space-y-6">
+                    <h3 className="text-4xl md:text-5xl font-black tracking-tight leading-[1.1]">
+                      DECODING COMPLEXITY. <br />
+                      <span className="text-primary italic">SCALING</span> SOLUTIONS.
+                    </h3>
+                    <div className="h-1 w-20 bg-primary/50 rounded-full" />
+                    <p className="text-xl text-muted-foreground leading-relaxed font-mono">
+                      <span className="text-primary font-bold">{'>'}</span> I am a Software Engineer who views code as a tool for architectural precision. 
+                      Focusing on the intersection of <span className="text-foreground font-bold underline decoration-primary/30">high-performance systems</span> 
+                      and <span className="text-foreground font-bold underline decoration-primary/30">scalable user interfaces</span>. 
+                      Currently engineering the next generation of KPI analytics at Salescode.ai.
                     </p>
                   </div>
+                </div>
+              </div>
+            </Reveal>
 
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-primary rounded-full"></div>
-                      <span className="font-medium">Software Engineer at Salescode.ai</span>
+            {/* Sub-system grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Reveal delay={0.1}>
+                <div className="p-6 rounded-2xl border border-white/5 bg-white/5 hover:bg-white/10 transition-colors group">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Layers className="text-primary w-5 h-5" />
+                    <h4 className="font-bold uppercase tracking-widest text-sm">Fullstack Architecture</h4>
+                  </div>
+                  <p className="text-xs text-muted-foreground font-mono leading-relaxed">
+                    Developing end-to-end ecosystems from low-latency backend microservices to responsive, data-driven frontends.
+                  </p>
+                </div>
+              </Reveal>
+              <Reveal delay={0.2}>
+                <div className="p-6 rounded-2xl border border-white/5 bg-white/5 hover:bg-white/10 transition-colors group">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Workflow className="text-primary w-5 h-5" />
+                    <h4 className="font-bold uppercase tracking-widest text-sm">Data Pipelines</h4>
+                  </div>
+                  <p className="text-xs text-muted-foreground font-mono leading-relaxed">
+                    Engineering robust processing pipelines using Kafka and Elasticsearch for real-time hierarchical KPI computation.
+                  </p>
+                </div>
+              </Reveal>
+            </div>
+          </div>
+
+          {/* Tech Stack Matrix */}
+          <div className="lg:col-span-4 space-y-6">
+            <Reveal delay={0.3}>
+              <div className="p-8 rounded-3xl border border-white/10 bg-black/20 backdrop-blur-xl relative overflow-hidden group">
+                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                  <Binary size={80} />
+                </div>
+                
+                <h4 className="text-sm font-bold uppercase tracking-[0.2em] mb-8 flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                  Technical_Matrix
+                </h4>
+
+                <div className="space-y-6 relative z-10">
+                  {skills.map((item) => (
+                    <div key={item.label} className="space-y-3">
+                      <div className="text-[10px] font-bold text-primary tracking-widest">{item.label}</div>
+                      <div className="flex flex-wrap gap-2">
+                        {item.stack.map(s => (
+                          <span key={s} className="px-2 py-1 text-[10px] font-mono border border-white/10 bg-white/5 rounded-md hover:bg-primary/20 hover:border-primary/50 transition-all cursor-default">
+                            {s}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-primary rounded-full"></div>
-                      <span className="font-medium">Full Stack Developer</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-primary rounded-full"></div>
-                      <span className="font-medium">Problem Solver & Tech Enthusiast</span>
-                    </div>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.4}>
+              <div className="p-6 rounded-3xl border border-dashed border-white/10 bg-primary/5">
+                <div className="flex justify-between items-end">
+                  <div className="space-y-1">
+                    <div className="text-[10px] font-bold text-muted-foreground uppercase">Runtime</div>
+                    <div className="text-3xl font-black">2024+</div>
+                  </div>
+                  <div className="text-right space-y-1">
+                    <div className="text-[10px] font-bold text-muted-foreground uppercase">Efficiency</div>
+                    <div className="text-3xl font-black text-green-500">99%</div>
                   </div>
                 </div>
               </div>
-            </div>
-          </Reveal>
-
-          {/* Skills & Expertise Card */}
-          <Reveal>
-            <div className="border-0 bg-card/50 rounded-lg transition-all duration-300 h-full flex">
-              <div className="p-6 h-full flex flex-col flex-1">
-                <div className="space-y-4 flex-1">
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">Technical Expertise</h3>
-
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold text-sm text-muted-foreground uppercase tracking-wide mb-2">
-                        Backend Development
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        <Badge variant="secondary" className="text-sm">
-                          Java
-                        </Badge>
-                        <Badge variant="secondary" className="text-sm">
-                          Node.js
-                        </Badge>
-                        <Badge variant="secondary" className="text-sm">
-                          Express.js
-                        </Badge>
-                        <Badge variant="secondary" className="text-sm">
-                          Go
-                        </Badge>
-                      </div>
-                    </div>
-
-                    <div>
-                      <h4 className="font-semibold text-sm text-muted-foreground uppercase tracking-wide mb-2">
-                        Frontend Development
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        <Badge variant="secondary" className="text-sm">
-                          React.js
-                        </Badge>
-                        <Badge variant="secondary" className="text-sm">
-                          Next.js
-                        </Badge>
-                        <Badge variant="secondary" className="text-sm">
-                          TypeScript
-                        </Badge>
-                        <Badge variant="secondary" className="text-sm">
-                          JavaScript
-                        </Badge>
-                      </div>
-                    </div>
-
-                    <div>
-                      <h4 className="font-semibold text-sm text-muted-foreground uppercase tracking-wide mb-2">
-                        Databases & Search
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        <Badge variant="secondary" className="text-sm">
-                          SQL
-                        </Badge>
-                        <Badge variant="secondary" className="text-sm">
-                          Elasticsearch
-                        </Badge>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Reveal>
+            </Reveal>
+          </div>
         </div>
 
-        {/* Current Role Section */}
+        {/* Current Operations - Subsystem View */}
         <Reveal>
-          <Card className="border-0 shadow-lg bg-gradient-to-r from-primary/10 to-primary/5 backdrop-blur-sm mt-12 max-w-4xl mx-auto">
-            <CardContent className="p-6">
-              <div className="text-center space-y-4">
-                <h3 className="text-xl md:text-2xl font-bold text-foreground">Current Role</h3>
-                <p className="text-base text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                  Currently working as a <strong className="text-primary">Full Stack Developer</strong> at{" "}
-                  <strong className="text-primary">Salescode.ai</strong>, where I work with{" "}
-                  <strong className="text-primary">Java</strong>, <strong className="text-primary">React</strong>,{" "}
-                  <strong className="text-primary">Elasticsearch</strong>,{" "}
-                  <strong className="text-primary">MySQL</strong>, and <strong className="text-primary">Node.js</strong>{" "}
-                  to build KPI dashboards and analytics solutions. I&apos;m passionate about creating seamless user
-                  experiences and embracing new challenges in the tech industry.
-                </p>
-                <div className="flex justify-center gap-4 pt-4">
-                  <Badge variant="outline" className="text-sm">
-                    Problem Solving
-                  </Badge>
-                  <Badge variant="outline" className="text-sm">
-                    User Experience
-                  </Badge>
-                  <Badge variant="outline" className="text-sm">
-                    Innovation
-                  </Badge>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+          <div className="mt-12 p-1 rounded-3xl bg-gradient-to-r from-primary/20 via-primary/5 to-transparent border border-white/10 max-w-5xl mx-auto">
+            <div className="p-8 md:p-12 rounded-[calc(1.5rem-1px)] bg-black/60 backdrop-blur-3xl relative overflow-hidden">
+               <div className="absolute -right-10 -top-10 opacity-[0.03]">
+                 <Cpu size={200} />
+               </div>
+               
+               <div className="grid md:grid-cols-4 gap-8 items-center">
+                 <div className="md:col-span-1 border-r border-white/10 pr-8">
+                   <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary mb-2">Process</h5>
+                   <div className="text-2xl font-bold font-mono">CURRENT_OPS</div>
+                 </div>
+                 <div className="md:col-span-3">
+                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed font-mono italic">
+                      {'//'} currently deployed at <span className="text-foreground font-bold">Salescode.ai</span> as a 
+                      <span className="text-foreground font-bold"> Full Stack Developer</span>. 
+                      optimizing performance across Java backends and React frontends 
+                      while managing complex data flows with Elasticsearch and MySQL.
+                    </p>
+                 </div>
+               </div>
+            </div>
+          </div>
         </Reveal>
       </div>
     </div>
