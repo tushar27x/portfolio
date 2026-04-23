@@ -29,7 +29,7 @@ const ExperienceCard = ({
   timelinePosition,
 }: ExperienceCardProps) => {
   return (
-    <Card className="border-0 shadow-lg bg-card/50 backdrop-blur-sm hover:shadow-xl transition-all duration-300 relative overflow-hidden group">
+    <Card className="rounded-3xl border border-black/5 dark:border-white/10 shadow-xl dark:shadow-primary/5 bg-card/50 backdrop-blur-sm hover:shadow-2xl hover:border-primary/30 transition-all duration-500 relative overflow-hidden group">
       {/* Adventure Progress Indicator */}
       <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-primary to-primary/50"></div>
 

@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link"
 import Reveal from "../Reveal"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
@@ -17,7 +18,7 @@ const About = () => {
       <div className="container mx-auto px-4 relative z-10">
         <Reveal>
           <div className="flex items-center gap-4 mb-16 justify-center lg:justify-start">
-            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center border border-primary/20">
+            <div className="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center border border-primary/20">
               <Cpu className="text-primary" />
             </div>
             <div className="text-center lg:text-left">
@@ -35,7 +36,7 @@ const About = () => {
             <Reveal>
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-transparent rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-                <div className="relative p-8 md:p-12 rounded-3xl border border-white/10 bg-black/40 backdrop-blur-xl">
+                <div className="relative p-8 md:p-12 rounded-3xl border border-white/10 bg-primary/5 backdrop-blur-xl">
                   <div className="space-y-6">
                     <h3 className="text-4xl md:text-5xl font-black tracking-tight leading-[1.1]">
                       DECODING COMPLEXITY. <br />
@@ -43,10 +44,9 @@ const About = () => {
                     </h3>
                     <div className="h-1 w-20 bg-primary/50 rounded-full" />
                     <p className="text-xl text-muted-foreground leading-relaxed font-mono">
-                      <span className="text-primary font-bold">{'>'}</span> I am a Software Engineer who views code as a tool for architectural precision. 
-                      Focusing on the intersection of <span className="text-foreground font-bold underline decoration-primary/30">high-performance systems</span> 
-                      and <span className="text-foreground font-bold underline decoration-primary/30">scalable user interfaces</span>. 
-                      Currently engineering the next generation of KPI analytics at Salescode.ai.
+                      <span className="text-primary font-bold">{'>'}</span> I am a Software Engineer who views code as a tool for architectural precision.
+                      Focusing on the intersection of <span className="text-foreground font-bold decoration-primary/30">high-performance systems</span> and <span className="text-foreground font-bold decoration-primary/30">scalable user interfaces</span>.
+                      Currently engineering the next generation of KPI analytics at <Link href="https://salescode.ai/" target="_blank" className="text-foreground font-bold hover:text-primary transition-colors underline decoration-primary/30">Salescode.ai</Link>.
                     </p>
                   </div>
                 </div>
@@ -83,11 +83,11 @@ const About = () => {
           {/* Tech Stack Matrix */}
           <div className="lg:col-span-4 space-y-6">
             <Reveal delay={0.3}>
-              <div className="p-8 rounded-3xl border border-white/10 bg-black/20 backdrop-blur-xl relative overflow-hidden group">
+              <div className="p-8 rounded-3xl border border-white/10 bg-primary/5 backdrop-blur-xl relative overflow-hidden group">
                 <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                   <Binary size={80} />
                 </div>
-                
+
                 <h4 className="text-sm font-bold uppercase tracking-[0.2em] mb-8 flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                   Technical_Matrix
@@ -129,26 +129,26 @@ const About = () => {
 
         {/* Current Operations - Subsystem View */}
         <Reveal>
-          <div className="mt-12 p-1 rounded-3xl bg-gradient-to-r from-primary/20 via-primary/5 to-transparent border border-white/10 max-w-5xl mx-auto">
-            <div className="p-8 md:p-12 rounded-[calc(1.5rem-1px)] bg-black/60 backdrop-blur-3xl relative overflow-hidden">
-               <div className="absolute -right-10 -top-10 opacity-[0.03]">
-                 <Cpu size={200} />
-               </div>
-               
-               <div className="grid md:grid-cols-4 gap-8 items-center">
-                 <div className="md:col-span-1 border-r border-white/10 pr-8">
-                   <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary mb-2">Process</h5>
-                   <div className="text-2xl font-bold font-mono">CURRENT_OPS</div>
-                 </div>
-                 <div className="md:col-span-3">
-                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed font-mono italic">
-                      {'//'} currently deployed at <span className="text-foreground font-bold">Salescode.ai</span> as a 
-                      <span className="text-foreground font-bold"> Full Stack Developer</span>. 
-                      optimizing performance across Java backends and React frontends 
-                      while managing complex data flows with Elasticsearch and MySQL.
-                    </p>
-                 </div>
-               </div>
+          <div className="mt-12 p-1 rounded-3xl bg-gradient-to-r from-primary/10 via-primary/5 to-transparent border border-white/10 max-w-5xl mx-auto">
+            <div className="p-8 md:p-12 rounded-[calc(1.5rem-1px)] bg-black/10 backdrop-blur-3xl relative overflow-hidden">
+              <div className="absolute -right-10 -top-10 opacity-[0.03]">
+                <Cpu size={200} />
+              </div>
+
+              <div className="grid md:grid-cols-4 gap-8 items-center">
+                <div className="md:col-span-1 border-r border-white/10 pr-8">
+                  <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary mb-2">Process</h5>
+                  <div className="text-2xl font-bold font-mono">CURRENT_OPS</div>
+                </div>
+                <div className="md:col-span-3">
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed font-mono italic">
+                    {'//'} currently deployed at <span className="text-foreground font-bold">Salescode.ai</span> as a
+                    <span className="text-foreground font-bold"> Full Stack Developer</span>.
+                    optimizing performance across Java backends and React frontends
+                    while managing complex data flows with Elasticsearch and MySQL.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </Reveal>

@@ -15,7 +15,7 @@ interface ProjectProps {
   imageUrl: string,
   gitHubUrl: string,
   liveUrl?: string,
-  tech: string[] 
+  tech: string[]
   category: string
   status: string
 }
@@ -43,7 +43,7 @@ const Projects = () => {
             </div>
           </div>
         </Reveal>
-...
+        ...
 
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-7xl mx-auto">
           {projects.map((project: any, index: number) => (
@@ -51,8 +51,8 @@ const Projects = () => {
               <div className="group relative">
                 {/* Project Frame */}
                 <div className="absolute -inset-0.5 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur opacity-0 group-hover:opacity-100 transition duration-500" />
-                
-                <Card className="relative border border-black/5 dark:border-white/10 rounded-3xl bg-white/40 dark:bg-black/40 backdrop-blur-xl overflow-hidden group-hover:border-primary/50 transition-all duration-500 h-full flex flex-col shadow-xl dark:shadow-none">
+
+                <Card className="relative border border-black/5 dark:border-white/10 rounded-3xl bg-white/40 dark:bg-black/40 backdrop-blur-xl overflow-hidden group-hover:border-primary/50 transition-all duration-500 h-full flex flex-col shadow-xl dark:shadow-primary/5">
                   {/* Top Bar / Header */}
                   <div className="bg-black/[0.03] dark:bg-white/5 px-6 py-3 border-b border-black/5 dark:border-white/10 flex items-center justify-between">
                     <div className="flex items-center gap-2">
@@ -62,16 +62,16 @@ const Projects = () => {
                       </span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Link 
-                        href={project.gitHubUrl} 
+                      <Link
+                        href={project.gitHubUrl}
                         target="_blank"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
                         <Github size={16} />
                       </Link>
                       {project.liveUrl && (
-                        <Link 
-                          href={project.liveUrl} 
+                        <Link
+                          href={project.liveUrl}
                           target="_blank"
                           className="text-muted-foreground hover:text-primary transition-colors"
                         >
@@ -85,15 +85,15 @@ const Projects = () => {
                     {/* Image Section with Overlay */}
                     <div className="relative aspect-video overflow-hidden border-b border-black/5 dark:border-white/10">
                       <PhotoPop>
-                        <Image 
-                          src={project.imageUrl} 
+                        <Image
+                          src={project.imageUrl}
                           alt={project.title}
                           fill
                           className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100"
                         />
                       </PhotoPop>
                       <div className="absolute top-4 left-4">
-                        <Badge className="bg-primary/20 backdrop-blur-md text-primary border-primary/20 text-[8px] font-mono uppercase tracking-widest">
+                        <Badge className="bg-primary/20 backdrop-blur-md text-primary border-primary/20 text-[8px] font-mono uppercase tracking-widest text-white">
                           {project.category}
                         </Badge>
                       </div>
@@ -103,10 +103,10 @@ const Projects = () => {
                     <div className="p-8 space-y-6 flex-1 flex flex-col justify-between">
                       <div className="space-y-4">
                         <div className="flex items-center justify-between">
-                           <h3 className="text-2xl font-black tracking-tight uppercase group-hover:text-primary transition-colors">
-                             {project.title}
-                           </h3>
-                           <Code2 size={18} className="text-primary/40" />
+                          <h3 className="text-2xl font-black tracking-tight uppercase group-hover:text-primary transition-colors">
+                            {project.title}
+                          </h3>
+                          <Code2 size={18} className="text-primary/40" />
                         </div>
                         <div className="relative">
                           <p className="text-sm text-muted-foreground leading-relaxed font-mono italic line-clamp-2 group-hover:line-clamp-none transition-all duration-500">
@@ -119,8 +119,8 @@ const Projects = () => {
                         <div className="h-px w-full bg-gradient-to-r from-black/10 dark:from-white/10 to-transparent" />
                         <div className="flex flex-wrap gap-2">
                           {project.tech?.slice(0, 5).map((t: string) => (
-                            <span 
-                              key={t} 
+                            <span
+                              key={t}
                               className="text-[10px] font-mono font-bold px-2 py-0.5 border border-black/5 dark:border-white/5 bg-black/[0.02] dark:bg-white/5 text-muted-foreground group-hover:border-primary/30 group-hover:text-primary transition-all"
                             >
                               {t}
@@ -139,14 +139,14 @@ const Projects = () => {
                             </div>
                           )}
                         </div>
-                        
+
                         {/* Status Footer */}
                         <div className="flex items-center justify-between pt-2">
-                           <div className="flex items-center gap-2">
-                             <Activity size={10} className="text-primary animate-pulse" />
-                             <span className="text-[8px] font-mono text-muted-foreground uppercase tracking-widest">Diagnostic_Check: Passed</span>
-                           </div>
-                           <div className="text-[8px] font-mono text-primary/40 uppercase tracking-widest">Optimized</div>
+                          <div className="flex items-center gap-2">
+                            <Activity size={10} className="text-primary animate-pulse" />
+                            <span className="text-[8px] font-mono text-muted-foreground uppercase tracking-widest">Diagnostic_Check: Passed</span>
+                          </div>
+                          <div className="text-[8px] font-mono text-primary/40 uppercase tracking-widest">Optimized</div>
                         </div>
                       </div>
                     </div>

@@ -42,7 +42,7 @@ const Skills = () => {
             return (
               <Reveal key={category} delay={index * 0.05}>
                 <div className="group h-full">
-                  <div className="relative h-full border border-black/10 dark:border-white/10 rounded-xl bg-white/5 dark:bg-black/40 backdrop-blur-xl overflow-hidden group-hover:border-primary/50 transition-all duration-300 shadow-xl dark:shadow-none flex flex-col">
+                  <div className="relative h-full border border-black/10 dark:border-white/10 rounded-xl bg-white/5 dark:bg-black/40 backdrop-blur-xl overflow-hidden group-hover:border-primary/50 transition-all duration-300 shadow-xl dark:shadow-primary/5 flex flex-col">
                     
                     {/* Terminal Header */}
                     <div className="bg-black/10 dark:bg-white/5 px-4 py-2 border-b border-black/5 dark:border-white/10 flex items-center justify-between">

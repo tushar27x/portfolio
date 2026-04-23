@@ -43,7 +43,7 @@ export default function ExperienceSection() {
                 <div className="md:col-span-3 pt-2">
                   <div className="flex items-center gap-4 md:flex-col md:items-start md:gap-1">
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-xl bg-black/[0.02] dark:bg-black/40 border border-black/5 dark:border-white/10 flex items-center justify-center relative shadow-sm dark:shadow-none">
+                      <div className="w-12 h-12 rounded-xl bg-black/[0.02] dark:bg-black/40 border border-black/5 dark:border-white/10 flex items-center justify-center relative shadow-sm dark:shadow-primary/5">
                         <Image 
                           src={exp.logoUrl} 
                           alt={exp.companyName}
@@ -73,7 +73,7 @@ export default function ExperienceSection() {
                 <div className="md:col-span-9 relative">
                    <div className="absolute top-0 left-[-35px] w-4 h-4 rounded-full border-2 border-primary bg-background z-20 hidden md:block group-hover:scale-125 transition-transform duration-300 shadow-[0_0_10px_rgba(var(--primary-rgb),0.5)]" />
                    
-                   <div className="p-8 rounded-3xl border border-black/5 dark:border-white/10 bg-white/40 dark:bg-black/40 backdrop-blur-xl group-hover:border-primary/30 transition-all duration-500 shadow-xl dark:shadow-none relative overflow-hidden">
+                   <div className="p-8 rounded-3xl border border-black/5 dark:border-white/10 bg-white/40 dark:bg-black/40 backdrop-blur-xl group-hover:border-primary/30 transition-all duration-500 shadow-xl dark:shadow-primary/5 relative overflow-hidden">
                       {/* Sub-decorative binary */}
                       <div className="absolute top-4 right-4 text-[8px] font-mono text-primary/5 select-none leading-none">
                         {Array(5).fill('01011001').join('\n')}
