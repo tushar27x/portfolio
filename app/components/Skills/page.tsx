@@ -2,7 +2,7 @@
 import React from "react";
 import Reveal from "../Reveal";
 import { detailedSkills } from "@/app/utils/skills";
-import { 
+import {
   Terminal as TerminalIcon,
   Code2,
   FileCode,
@@ -33,17 +33,16 @@ const Skills = () => {
             </div>
           </div>
         </Reveal>
-...
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {Object.entries(detailedSkills).map(([category, skillList], index) => {
             const fileName = category.toLowerCase().replace(/ & /g, '_').replace(/ /g, '_') + '.config';
-            
+
             return (
               <Reveal key={category} delay={index * 0.05}>
-                <div className="group h-full">
+                <div className="group h-[320px]">
                   <div className="relative h-full border border-black/10 dark:border-white/10 rounded-xl bg-white/5 dark:bg-black/40 backdrop-blur-xl overflow-hidden group-hover:border-primary/50 transition-all duration-300 shadow-xl dark:shadow-primary/5 flex flex-col">
-                    
+
                     {/* Terminal Header */}
                     <div className="bg-black/10 dark:bg-white/5 px-4 py-2 border-b border-black/5 dark:border-white/10 flex items-center justify-between">
                       <div className="flex gap-1.5">
@@ -63,33 +62,26 @@ const Skills = () => {
                         <span className="text-muted-foreground/30 select-none">01</span>
                         <p><span className="text-primary">export const</span> <span className="text-blue-400">{category.split(' ')[0]}</span> = [</p>
                       </div>
-                      
-                      {skillList.map((skill, i) => (
-                        <div key={skill} className="flex gap-4 group/line">
-                          <span className="text-muted-foreground/30 select-none">{String(i + 2).padStart(2, '0')}</span>
-                          <div className="flex items-center gap-2">
-                             <span className="text-primary/40 group-hover/line:text-primary transition-colors">•</span>
-                             <span className="text-muted-foreground group-hover:text-foreground transition-colors">&apos;{skill}&apos;</span>
-                             <span className="text-muted-foreground/30">,</span>
-                          </div>
-                        </div>
-                      ))}
 
-                      <div className="flex gap-4 mt-2">
+                      {/* Skill List with Hover Scroll */}
+                      <div className="flex-1 overflow-hidden group-hover:overflow-y-auto pr-2 custom-scrollbar">
+                        {skillList.map((skill, i) => (
+                          <div key={skill} className="flex gap-4 group/line">
+                            <span className="text-muted-foreground/30 select-none">{String(i + 2).padStart(2, '0')}</span>
+                            <div className="flex items-center gap-2">
+                              <span className="text-primary/40 group-hover/line:text-primary transition-colors">•</span>
+                              <span className="text-muted-foreground group-hover:text-foreground transition-colors">&apos;{skill}&apos;</span>
+                              <span className="text-muted-foreground/30">,</span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+
+                      <div className="flex gap-4 mt-2 shrink-0">
                         <span className="text-muted-foreground/30 select-none">{String(skillList.length + 2).padStart(2, '0')}</span>
                         <p>];</p>
                       </div>
 
-                      {/* Diagnostic Info */}
-                      <div className="mt-8 pt-4 border-t border-white/5 opacity-0 group-hover:opacity-100 transition-opacity">
-                         <div className="flex items-center justify-between text-[10px] text-primary/40">
-                            <div className="flex items-center gap-2 uppercase tracking-tighter">
-                               <Activity size={10} />
-                               <span>Status: Operational</span>
-                            </div>
-                            <span className="font-bold">v2.0.4</span>
-                         </div>
-                      </div>
                     </div>
                   </div>
                 </div>

@@ -81,7 +81,7 @@ const About = () => {
           </div>
 
           {/* Tech Stack Matrix */}
-          <div className="lg:col-span-4 space-y-6">
+          <div className="lg:col-span-4 space-y-4">
             <Reveal delay={0.3}>
               <div className="p-8 rounded-3xl border border-white/10 bg-primary/5 backdrop-blur-xl relative overflow-hidden group">
                 <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
@@ -93,13 +93,13 @@ const About = () => {
                   Technical_Matrix
                 </h4>
 
-                <div className="space-y-6 relative z-10">
+                <div className="space-y-4 relative z-10">
                   {skills.map((item) => (
-                    <div key={item.label} className="space-y-3">
-                      <div className="text-[10px] font-bold text-primary tracking-widest">{item.label}</div>
+                    <div key={item.label} className="space-y-2">
+                      <div className="text-xs font-bold text-primary tracking-widest uppercase">{item.label}</div>
                       <div className="flex flex-wrap gap-2">
                         {item.stack.map(s => (
-                          <span key={s} className="px-2 py-1 text-[10px] font-mono border border-white/10 bg-white/5 rounded-md hover:bg-primary/20 hover:border-primary/50 transition-all cursor-default">
+                          <span key={s} className="px-3 py-1.5 text-[12px] font-mono border border-white/10 bg-white/5 rounded-md hover:bg-primary/20 hover:border-primary/50 transition-all cursor-default">
                             {s}
                           </span>
                         ))}
