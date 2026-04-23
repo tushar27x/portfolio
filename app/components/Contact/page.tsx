@@ -23,7 +23,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen py-24">
+    <div className="min-h-screen py-24 bg-zinc-50/30 dark:bg-transparent">
       <div className="container mx-auto px-4">
         <Reveal>
           <div className="flex items-center gap-4 mb-12">
@@ -44,8 +44,8 @@ const Contact = () => {
           {/* Terminal Window */}
           <div className="lg:col-span-8">
             <Reveal>
-              <div className="border border-white/10 rounded-xl bg-black/40 backdrop-blur-xl overflow-hidden shadow-2xl">
-                <div className="bg-white/5 px-4 py-2 border-b border-white/10 flex items-center justify-between">
+              <div className="border border-black/10 dark:border-white/10 rounded-xl bg-white/40 dark:bg-black/40 backdrop-blur-xl overflow-hidden shadow-2xl">
+                <div className="bg-black/5 dark:bg-white/5 px-4 py-2 border-b border-black/10 dark:border-white/10 flex items-center justify-between">
                   <div className="flex gap-1.5">
                     <div className="w-3 h-3 rounded-full bg-red-500/50" />
                     <div className="w-3 h-3 rounded-full bg-yellow-500/50" />
@@ -85,7 +85,7 @@ const Contact = () => {
                     <p className="text-primary animate-pulse">_</p>
                   </div>
 
-                  <div className="mt-12 p-4 bg-white/5 rounded-lg border border-white/5 overflow-hidden">
+                  <div className="mt-12 p-4 bg-black/5 dark:bg-white/5 rounded-lg border border-black/5 dark:border-white/5 overflow-hidden">
                     <h3 className="text-xs font-bold text-muted-foreground uppercase mb-4 flex items-center gap-2">
                       <Network size={12} /> System Logs
                     </h3>
@@ -107,9 +107,9 @@ const Contact = () => {
           {/* Side Info */}
           <div className="lg:col-span-4 space-y-6">
             <Reveal delay={0.2}>
-              <div className="p-6 border border-white/10 rounded-xl bg-black/20 backdrop-blur-xl">
+              <div className="p-6 border border-black/10 dark:border-white/10 rounded-xl bg-white/20 dark:bg-black/20 backdrop-blur-xl">
                 <h3 className="text-sm font-bold uppercase tracking-widest mb-6 flex items-center gap-2">
-                   <Cpu size={14} className="text-primary" /> Direct Channels
+                  <Cpu size={14} className="text-primary" /> Direct Channels
                 </h3>
                 <div className="space-y-3">
                   {[
@@ -117,11 +117,11 @@ const Contact = () => {
                     { name: 'GitHub', icon: Github, val: 'View Source', href: 'https://github.com/tushar27x' },
                     { name: 'LinkedIn', icon: Linkedin, val: 'Connect', href: 'https://www.linkedin.com/in/tushar-sharma-01961b22b/' }
                   ].map((chan) => (
-                    <Link 
+                    <Link
                       key={chan.name}
                       href={chan.href}
                       target="_blank"
-                      className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5 hover:border-primary/50 transition-all group gap-2"
+                      className="flex items-center justify-between p-3 rounded-lg bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 hover:border-primary/50 transition-all group gap-2"
                     >
                       <div className="flex items-center gap-3 min-w-0">
                         <chan.icon size={16} className="text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
@@ -135,7 +135,7 @@ const Contact = () => {
             </Reveal>
 
             <Reveal delay={0.4}>
-              <div className="p-6 border border-white/10 rounded-xl bg-primary/5 backdrop-blur-xl">
+              <div className="p-6 border border-black/10 dark:border-white/10 rounded-xl bg-primary/5 backdrop-blur-xl">
                 <p className="text-[10px] leading-relaxed text-muted-foreground font-mono italic">
                   {'//'} Note: Always looking for challenges that require deep technical knowledge and creative problem solving.
                 </p>
