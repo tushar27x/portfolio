@@ -113,7 +113,7 @@ const Contact = () => {
                 </h3>
                 <div className="space-y-3">
                   {[
-                    { name: 'Email', icon: Mail, val: 'Send Message', href: 'mailto:sharma.tushar.271003@gmail.com' },
+                    { name: 'Email', icon: Mail, val: 'Send Message', href: 'mailto:tushar27x@proton.me' },
                     { name: 'GitHub', icon: Github, val: 'View Source', href: 'https://github.com/tushar27x' },
                     { name: 'LinkedIn', icon: Linkedin, val: 'Connect', href: 'https://www.linkedin.com/in/tushar-sharma-01961b22b/' }
                   ].map((chan) => (
