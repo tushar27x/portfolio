@@ -38,7 +38,6 @@ const projects: Project[] = [
         description: 'A comprehensive RESTful API for managing music libraries with albums, songs, and playlists. Features JWT authentication, fuzzy search, CRUD operations, and complete Swagger documentation. Built with Go, Gin framework, and PostgreSQL.',
         imageUrl: '/music-lib-api.png',
         gitHubUrl: 'https://github.com/tushar27x/music-lib-api',
-        liveUrl: 'https://independent-carlene-tushar27x-a3461680.koyeb.app/swagger/index.html',
         tech: ["Go", "Gin", "GORM", "PostgreSQL", "Swagger", "JWT", "Docker"],
         category: 'backend',
         status: 'completed'
