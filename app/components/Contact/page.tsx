@@ -63,7 +63,7 @@ const Contact = () => {
                   <div className="flex gap-4">
                     <span className="text-muted-foreground/30 select-none">02</span>
                     <p className="pl-4 text-muted-foreground break-all">
-                      email: <span className="text-green-400">&apos;sharma.tushar.271003@gmail.com&apos;</span>,
+                      email: <span className="text-green-400">&apos;tushar27x@proton.me&apos;</span>,
                     </p>
                   </div>
                   <div className="flex gap-4">
