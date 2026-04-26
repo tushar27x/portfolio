@@ -5,40 +5,27 @@ interface Experience {
   startDate: string,
   endDate: string,
   description: string,
-  responsibilities: string[]
+  responsibilities: string[],
+  skills: string[]
 }
 
 const experiences: Experience[] = [
   {
     companyName: "Salescode.ai",
     logoUrl: "/salescode.png",
-    position: "Software Engineer Trainee",
-    startDate: "Aug 2024",
-    endDate: "Feb 2025",
-    description:
-      "Joined as a Software Engineer Trainee, learning the analytics platform architecture, Elasticsearch-based KPI systems, and backend development practices while contributing to internal features.",
-    responsibilities: [
-      "Learned Java-based backend development and analytics workflows used in KPI processing",
-      "Assisted in building dashboard features and backend enhancements for internal tools",
-      "Worked with MySQL and Elasticsearch queries to understand real-world analytics datasets",
-      "Participated in code reviews, sprint planning, and technical discussions with the analytics team",
-    ],
-  },
-  {
-    companyName: "Salescode.ai",
-    logoUrl: "/salescode.png",
     position: "Software Engineer",
-    startDate: "Feb 2025",
+    startDate: "Aug 2024",
     endDate: "Present",
     description:
-      "Backend Software Engineer working on SalesLens, a KPI analytics platform, building scalable services and APIs for performance tracking and hierarchical analytics dashboards.",
+      "Core Backend Engineer architecting SalesLens, an enterprise KPI analytics platform. Focused on building high-performance services and optimizing data pipelines for real-time hierarchical monitoring.",
     responsibilities: [
-      "Develop and maintain backend analytics services using Java, MySQL, and Elasticsearch for KPI computation and reporting",
-      "Design and optimize Elasticsearch queries and data pipelines to improve dashboard performance and system efficiency",
-      "Build RESTful APIs for Manager and Supervisory applications enabling hierarchical KPI monitoring",
-      "Manage Jenkins pipelines to automate periodic KPI processing jobs across enterprise clients",
-      "Collaborate with analytics and business teams to translate real-world sales data into scalable KPI frameworks",
+      "Optimized KPI analytics systems using Java, MySQL, and Elasticsearch, achieving a 20-30% improvement in dashboard load times and ~30% reduction in query latency.",
+      "Collaborated with business stakeholders to design KPI frameworks for 50+ teams, enhancing decision-making efficiency across the organization.",
+      "Automated KPI batch processing via Jenkins CI/CD pipelines, reducing manual effort by 30-40% and significantly improving data processing reliability.",
+      "Developed hierarchical analytics dashboards using Java and Elasticsearch to enable granular performance tracking for Manager and Supervisor roles.",
+      "Contributed to React.js-based dashboard UI development, enhancing data visualization and usability for complex performance metrics.",
     ],
+    skills: ["Java", "MySQL", "Elasticsearch", "Jenkins", "Spring Boot", "REST APIs", "CI/CD", "React.js"]
   },
 ];
 

@@ -101,6 +101,15 @@ export default function ExperienceSection() {
                             </div>
                           ))}
                         </div>
+
+                        {/* Tech Stack for this Role */}
+                        <div className="pt-4 flex flex-wrap gap-2">
+                          {exp.skills.map((skill, i) => (
+                            <span key={i} className="text-[10px] font-mono px-2 py-1 bg-primary/5 border border-primary/10 text-primary rounded-md">
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
                       </div>
                    </div>
                 </div>

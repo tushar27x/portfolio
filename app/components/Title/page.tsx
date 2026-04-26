@@ -99,18 +99,30 @@ export default function Title() {
               </div>
 
               <Reveal delay={0.6}>
-                <div className="grid grid-cols-2 gap-4 sm:gap-8 w-full max-w-md pt-2 lg:pt-4 px-4 lg:px-0">
-                  <div className="space-y-1 lg:space-y-2">
-                    <div className="flex items-center justify-center lg:justify-start gap-2 text-[9px] lg:text-[10px] font-mono text-muted-foreground uppercase tracking-widest">
-                      <Activity size={10} className="text-green-500 lg:w-3 lg:h-3" /> System_Status
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 w-full pt-2 lg:pt-4">
+                  <div className="space-y-1 lg:space-y-2 p-3 border border-white/5 bg-white/5 rounded-lg backdrop-blur-sm">
+                    <div className="flex items-center gap-2 text-[9px] font-mono text-muted-foreground uppercase tracking-widest">
+                      <Activity size={10} className="text-green-500" /> Latency
                     </div>
-                    <div className="text-xs lg:text-sm font-bold uppercase tracking-tight">Active_Optimal</div>
+                    <div className="text-sm font-bold tracking-tight text-primary">-30% REDUCTION</div>
                   </div>
-                  <div className="space-y-1 lg:space-y-2">
-                    <div className="flex items-center justify-center lg:justify-start gap-2 text-[9px] lg:text-[10px] font-mono text-muted-foreground uppercase tracking-widest">
-                      <Database size={10} className="text-primary lg:w-3 lg:h-3" /> Core_Stack
+                  <div className="space-y-1 lg:space-y-2 p-3 border border-white/5 bg-white/5 rounded-lg backdrop-blur-sm">
+                    <div className="flex items-center gap-2 text-[9px] font-mono text-muted-foreground uppercase tracking-widest">
+                      <Network size={10} className="text-blue-500" /> Scale
                     </div>
-                    <div className="text-xs lg:text-sm font-bold uppercase tracking-tight">Java_React_Python</div>
+                    <div className="text-sm font-bold tracking-tight text-primary">50+ TEAMS</div>
+                  </div>
+                  <div className="space-y-1 lg:space-y-2 p-3 border border-white/5 bg-white/5 rounded-lg backdrop-blur-sm">
+                    <div className="flex items-center gap-2 text-[9px] font-mono text-muted-foreground uppercase tracking-widest">
+                      <Cpu size={10} className="text-purple-500" /> Automation
+                    </div>
+                    <div className="text-sm font-bold tracking-tight text-primary">40% EFFORT_GAIN</div>
+                  </div>
+                  <div className="space-y-1 lg:space-y-2 p-3 border border-white/5 bg-white/5 rounded-lg backdrop-blur-sm">
+                    <div className="flex items-center gap-2 text-[9px] font-mono text-muted-foreground uppercase tracking-widest">
+                      <Database size={10} className="text-orange-500" /> Perf
+                    </div>
+                    <div className="text-sm font-bold tracking-tight text-primary">25% LOAD_SPEED</div>
                   </div>
                 </div>
               </Reveal>
