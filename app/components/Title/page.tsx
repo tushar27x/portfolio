@@ -82,11 +82,11 @@ export default function Title() {
                       <span className="text-primary font-bold">{'>'}</span>
                       <TypeAnimation
                         sequence={[
-                          'Building Scalable Systems',
+                          'Distributed Systems Engineering',
                           2000,
-                          'Optimizing Performance',
+                          'Backend Performance Optimization',
                           2000,
-                          'Decoding Complexity',
+                          'Data-Intensive Applications',
                           2000,
                         ]}
                         wrapper="span"
@@ -133,7 +133,7 @@ export default function Title() {
                   className="relative flex items-center gap-3 lg:gap-4 bg-primary hover:bg-primary/90 text-primary-foreground px-8 lg:px-10 py-6 lg:py-8 rounded-xl lg:rounded-2xl transition-all duration-500 hover:scale-[1.02] shadow-[0_0_30px_rgba(var(--primary-rgb),0.2)] lg:shadow-[0_0_40px_rgba(var(--primary-rgb),0.3)] group overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-                  <span className="text-xs lg:text-sm font-black tracking-widest relative z-10">COMPILE_PROFILE.EXE</span>
+                  <span className="text-xs lg:text-sm font-black tracking-widest relative z-10 uppercase">Download_Technical_Resume</span>
                   <IoMdDownload size={18} className="lg:w-5 lg:h-5 group-hover:translate-y-1 transition-transform relative z-10" />
                 </Button>
               </div>

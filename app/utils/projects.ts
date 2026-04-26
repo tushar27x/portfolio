@@ -2,55 +2,64 @@ interface Project {
     id: number;
     title: string;
     description: string;
+    challenge?: string;
     imageUrl: string;
     gitHubUrl: string;
     liveUrl?: string;
     tech: string[];
     category: 'backend' | 'frontend' | 'fullstack' | 'cli';
     status: 'completed' | 'in-progress' | 'archived';
+    featured?: boolean;
+    isTutorial?: boolean;
 }
 
 const projects: Project[] = [
     {
         id: 9,
         title: 'InsightsHub',
-        description: 'An AI-powered GitHub analytics platform using FastAPI and async processing. Integrated Redis caching and optimized GraphQL API usage, significantly reducing redundant calls and lowering response times.',
+        description: 'An AI-powered GitHub analytics engine transforming activity into narrative insights using LLMs and async data pipelines.',
+        challenge: 'Managed high-volume API rate limiting and data consistency by implementing a Redis-backed asynchronous queue and GraphQL batching.',
         imageUrl: '/insight_hub.png',
         gitHubUrl: 'https://github.com/tushar27x/insight_hub',
         liveUrl: 'https://insight-hub-nu.vercel.app/',
-        tech: ["FastAPI", "Next.js", "PostgreSQL", "Redis", "GraphQL", "LLM Integration", "OAuth2"],
+        tech: ["Python", "FastAPI", "PostgreSQL", "Redis", "LLM Integration", "GraphQL", "Next.js"],
         category: 'fullstack',
-        status: 'completed'
+        status: 'completed',
+        featured: true
     },
     {
         id: 8,
-        title: 'Real-Time Event Processing Platform',
-        description: 'Architected a high-throughput event-driven system with Kafka-based pipelines. Optimized data flow and processing efficiency, improving throughput and reducing processing latency under load. Integrated Prometheus/Grafana for real-time monitoring.',
+        title: 'Event Processing Platform',
+        description: 'A production-grade event-driven system implementing idempotent consumers and comprehensive observability pipelines with Prometheus and Grafana.',
+        challenge: 'Ensured exactly-once processing using Redis-based deduplication and built a resilient architecture with Dead Letter Queue (DLQ) handling and real-time Kafka consumer lag monitoring.',
         imageUrl: '/realtime.png',
         gitHubUrl: 'https://github.com/tushar27x/kafka-event-processing-platform',
         tech: ["Java", "Spring Boot", "Kafka", "PostgreSQL", "Redis", "Prometheus", "Grafana"],
         category: 'backend',
-        status: 'completed'
+        status: 'completed',
+        featured: true
     },
     {
         id: 2,
         title: 'Music Library API',
-        description: 'A production-grade RESTful API managing music libraries with JWT authentication, fuzzy search, and CRUD operations. Features complete Swagger documentation and Docker containerization.',
+        description: 'A RESTful API for managing music libraries with JWT authentication and fuzzy search.',
         imageUrl: '/music-lib-api.png',
         gitHubUrl: 'https://github.com/tushar27x/music-lib-api',
-        tech: ["Go", "Gin", "GORM", "PostgreSQL", "Swagger", "JWT", "Docker"],
+        tech: ["Go", "Gin", "PostgreSQL", "JWT", "Docker"],
         category: 'backend',
-        status: 'completed'
+        status: 'completed',
+        isTutorial: true
     },
     {
         id: 6,
         title: 'Personal Shell',
-        description: 'A custom CLI built in Go implementing low-level system programming concepts including command history, file system navigation, and process management.',
+        description: 'A custom command-line interface exploring low-level system programming and process management.',
         imageUrl: '/go-shell.png',
         gitHubUrl: 'https://github.com/tushar27x/go-CLI',
-        tech: ["Go", "System Programming", "Unix Shell", "File I/O"],
+        tech: ["Go", "CLI", "System Programming"],
         category: 'cli',
-        status: 'completed'
+        status: 'completed',
+        isTutorial: true
     },
 ];
 

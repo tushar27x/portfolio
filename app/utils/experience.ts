@@ -17,15 +17,15 @@ const experiences: Experience[] = [
     startDate: "Aug 2024",
     endDate: "Present",
     description:
-      "Core Backend Engineer architecting SalesLens, an enterprise KPI analytics platform. Focused on building high-performance services and optimizing data pipelines for real-time hierarchical monitoring.",
+      "Backend Engineer for SalesLens (KPI analytics platform). Focused on optimizing Java/Netty services and Elasticsearch retrieval systems for real-time monitoring.",
     responsibilities: [
-      "Optimized KPI analytics systems using Java, MySQL, and Elasticsearch, achieving a 20-30% improvement in dashboard load times and ~30% reduction in query latency.",
-      "Collaborated with business stakeholders to design KPI frameworks for 50+ teams, enhancing decision-making efficiency across the organization.",
-      "Automated KPI batch processing via Jenkins CI/CD pipelines, reducing manual effort by 30-40% and significantly improving data processing reliability.",
-      "Developed hierarchical analytics dashboards using Java and Elasticsearch to enable granular performance tracking for Manager and Supervisor roles.",
-      "Contributed to React.js-based dashboard UI development, enhancing data visualization and usability for complex performance metrics.",
+      "Reduced query latency by 30% through Elasticsearch indexing strategies and query refactoring of KPI engines.",
+      "Automated KPI batch processing via Jenkins, reducing manual effort by 40% for high-volume data ingestion.",
+      "Built hierarchical analytics frameworks for 50+ teams to enable precise performance tracking.",
+      "Developed high-concurrency RESTful services using Netty, maintaining 99.9% reliability for mission-critical metrics.",
+      "Improved dashboard responsiveness by 25% through backend data aggregation and MySQL schema optimization.",
     ],
-    skills: ["Java", "MySQL", "Elasticsearch", "Jenkins", "Spring Boot", "REST APIs", "CI/CD", "React.js"]
+    skills: ["Java", "Netty", "Elasticsearch", "MySQL", "Jenkins", "REST APIs", "CI/CD", "Redis"]
   },
 ];
 

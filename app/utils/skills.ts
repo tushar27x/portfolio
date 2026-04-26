@@ -4,31 +4,32 @@ export interface SkillCategory {
 }
 
 export const skills: SkillCategory[] = [
-  { label: "BACKEND", stack: ["Java", "Go", "Python", "Spring Boot", "FastAPI"] },
-  { label: "FRONTEND", stack: ["React", "Next.js", "TypeScript", "Tailwind"] },
-  { label: "DATA", stack: ["PostgreSQL", "Kafka", "Redis", "Elasticsearch"] }
+  { label: "BACKEND", stack: ["Java", "Netty", "Python", "FastAPI"] },
+  { label: "FRONTEND", stack: ["React.js", "Next.js", "TypeScript", "Tailwind"] },
+  { label: "DATA", stack: ["Elasticsearch", "Kafka", "Redis", "PostgreSQL"] }
 ];
 
 export const detailedSkills = {
-  Languages: ["Java", "Go", "Python", "JavaScript", "TypeScript"],
-  "Backend & APIs": [
-    "Spring Boot",
+  Languages: ["Java", "Python", "JavaScript", "TypeScript", "SQL"],
+  "Backend & Systems": [
+    "Netty",
+    "Kafka",
+    "Elasticsearch",
     "FastAPI",
-    "Gin",
     "REST APIs",
-    "GraphQL",
-    "GORM",
-    "Swagger",
+    "Redis",
+    "Async Processing"
   ],
-  "Databases & Search": ["PostgreSQL", "MySQL", "Redis", "Elasticsearch"],
-  "AI": ["Gemini AI", "Groq", "Prompt Engineering"],
-  Frontend: ["Next.js", "Tailwind CSS", "HTML/CSS"],
+  Databases: ["PostgreSQL", "MySQL", "MongoDB"],
   "Tools & DevOps": [
-    "Docker",
     "Jenkins",
+    "Docker",
     "Git",
-    "CI/CD"
+    "CI/CD",
+    "Prometheus",
+    "Grafana"
   ],
+  Frontend: ["React.js", "Next.js", "Tailwind CSS", "UI/UX Design"],
 };
 
 export default skills;
