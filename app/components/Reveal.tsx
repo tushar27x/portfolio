@@ -6,9 +6,10 @@ import { motion, useAnimation, useInView } from 'framer-motion';
 interface RevealProps {
   children: React.ReactNode;
   delay?: number;
+  className?: string;
 }
 
-const Reveal = ({ children, delay = 0.25 }: RevealProps) => {
+const Reveal = ({ children, delay = 0.25, className }: RevealProps) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
@@ -21,7 +22,7 @@ const Reveal = ({ children, delay = 0.25 }: RevealProps) => {
     }, [isInView, mainControls]);
 
     return (
-        <div ref={ref} className='relative w-auto'>
+        <div ref={ref} className={`relative ${className || ''}`}>
             <motion.div
                 variants={{
                     hidden: { opacity: 0, y: 75 },
@@ -30,6 +31,7 @@ const Reveal = ({ children, delay = 0.25 }: RevealProps) => {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ delay: delay, duration: 0.5 }}
+                className={className || ''}
             >
                 {children}
             </motion.div>
