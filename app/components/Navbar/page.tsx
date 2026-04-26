@@ -42,6 +42,7 @@ export default function Navbar() {
             <NavLink href="#home">Home</NavLink>
             <NavLink href="#about">About</NavLink>
             <NavLink href="#skills">Skills</NavLink>
+            <NavLink href="#deep-dive">Systems</NavLink>
             <NavLink href='#experience'>Experience</NavLink>
             <NavLink href="#project">Projects</NavLink>
             <NavLink href="#contact">Contact</NavLink>

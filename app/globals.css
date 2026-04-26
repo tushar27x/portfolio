@@ -81,14 +81,16 @@
   }
 }
 
-/* Global Glassmorphism Override */
-.bg-card, .bg-background {
-  @apply bg-transparent !important;
-}
-
+/* Glassmorphism Overrides */
 section {
   @apply bg-transparent !important;
 }
+
+/* 
+  Removed global .bg-background override to allow components 
+  like sidebars, dialogs, and navbars to maintain their 
+  intended background colors while respecting the theme.
+*/
 
 div[class*="bg-gradient"] {
   background: transparent !important;

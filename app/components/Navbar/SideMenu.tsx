@@ -16,19 +16,31 @@ interface SideMenuProps {
 export default function SideMenu({ isOpen, onClose }: SideMenuProps) {
   return (
     <Sheet open={isOpen} onOpenChange={onClose}>
-      <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-        <SheetHeader>
-          <SheetTitle>Menu</SheetTitle>
+      <SheetContent side="right" className="w-[300px] sm:w-[400px] !bg-white dark:!bg-black border-l-primary/20 flex flex-col">
+        <SheetHeader className="flex flex-row items-center justify-between space-y-0 pb-4 border-b border-primary/10">
+          <SheetTitle className="text-xl font-black tracking-tighter uppercase">Menu.sys</SheetTitle>
+          <ModeToggle />
         </SheetHeader>
-        <ScrollArea className="h-[calc(100vh-8rem)] mt-6">
+        <ScrollArea className="flex-1 mt-6">
           <nav className="flex flex-col space-y-4">
-            <NavLink href="#about" onClick={onClose}>About</NavLink>
-            <NavLink href="#skills" onClick={onClose}>Skills</NavLink>
-            <NavLink href="#project" onClick={onClose}>Projects</NavLink>
-            <NavLink href='#experience' onClick={onClose}>Experience</NavLink>
-            <NavLink href="#contact" onClick={onClose}>Contact</NavLink>
+            <NavLink href="#home" onClick={onClose}>00_Home</NavLink>
+            <NavLink href="#about" onClick={onClose}>01_About</NavLink>
+            <NavLink href="#skills" onClick={onClose}>02_Skills</NavLink>
+            <NavLink href="#deep-dive" onClick={onClose}>03_System_Deep_Dive</NavLink>
+            <NavLink href="#experience" onClick={onClose}>04_Experience</NavLink>
+            <NavLink href="#project" onClick={onClose}>05_Projects</NavLink>
+            <NavLink href="#contact" onClick={onClose}>06_Contact</NavLink>
           </nav>
         </ScrollArea>
+        
+        <div className="pt-6 border-t border-primary/10">
+          <Button 
+            onClick={download}
+            className="w-full flex items-center gap-3 bg-primary text-primary-foreground font-bold"
+          >
+            <IoMdDownload /> DOWNLOAD_RESUME
+          </Button>
+        </div>
       </SheetContent>
     </Sheet>
   )
