@@ -28,7 +28,7 @@ const Skills = () => {
             <div className="text-center lg:text-left">
               <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tighter uppercase font-mono">04_SYSTEM_DEPENDENCIES</h2>
               <div className="flex items-center gap-2 text-[10px] text-muted-foreground font-mono">
-                $ ls -la /usr/local/bin/skills/
+                $ cat /etc/skills/*.yml
               </div>
             </div>
           </div>
@@ -36,7 +36,8 @@ const Skills = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {Object.entries(detailedSkills).map(([category, skillList], index) => {
-            const fileName = category.toLowerCase().replace(/ & /g, '_').replace(/ /g, '_') + '.config';
+            const key = category.toLowerCase().replace(/ & /g, '_').replace(/,/g, '').replace(/\//g, '_').replace(/ +/g, '_');
+            const fileName = key + '.yml';
 
             return (
               <Reveal key={category} delay={index * 0.05}>
@@ -58,29 +59,28 @@ const Skills = () => {
 
                     {/* Terminal Content */}
                     <div className="p-6 font-mono text-xs md:text-sm flex-1">
-                      <div className="flex gap-4 mb-4">
+                      <div className="flex gap-4 mb-1">
                         <span className="text-muted-foreground/30 select-none">01</span>
-                        <p><span className="text-primary">export const</span> <span className="text-blue-400">{category.split(' ')[0]}</span> = [</p>
+                        <p className="text-muted-foreground/50"># {fileName}</p>
+                      </div>
+                      <div className="flex gap-4 mb-3">
+                        <span className="text-muted-foreground/30 select-none">02</span>
+                        <p><span className="text-blue-400">{key}</span>:</p>
                       </div>
 
                       {/* Skill List with Hover Scroll */}
                       <div className="flex-1 overflow-hidden group-hover:overflow-y-auto pr-2 custom-scrollbar">
                         {skillList.map((skill, i) => (
                           <div key={skill} className="flex gap-4 group/line">
-                            <span className="text-muted-foreground/30 select-none">{String(i + 2).padStart(2, '0')}</span>
-                            <div className="flex items-center gap-2">
-                              <span className="text-primary/40 group-hover/line:text-primary transition-colors">•</span>
-                              <span className="text-muted-foreground group-hover:text-foreground transition-colors">&apos;{skill}&apos;</span>
-                              <span className="text-muted-foreground/30">,</span>
+                            <span className="text-muted-foreground/30 select-none">{String(i + 3).padStart(2, '0')}</span>
+                            <div className="flex items-center gap-2 pl-4">
+                              <span className="text-primary/40 group-hover/line:text-primary transition-colors">-</span>
+                              <span className="text-muted-foreground group-hover:text-foreground transition-colors">{skill}</span>
                             </div>
                           </div>
                         ))}
                       </div>
 
-                      <div className="flex gap-4 mt-2 shrink-0">
-                        <span className="text-muted-foreground/30 select-none">{String(skillList.length + 2).padStart(2, '0')}</span>
-                        <p>];</p>
-                      </div>
 
                     </div>
                   </div>

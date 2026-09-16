@@ -111,7 +111,7 @@ const Projects = () => {
         {/* Featured Section */}
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-7xl mx-auto mb-24">
           {featuredProjects.map((project, index) => (
-            <Reveal key={project.id} delay={index * 0.1}>
+            <Reveal key={project.id} delay={index * 0.1} className="h-full">
               <ProjectCard project={project} />
             </Reveal>
           ))}
@@ -131,7 +131,7 @@ const Projects = () => {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto">
           {tutorialProjects.map((project, index) => (
-            <Reveal key={project.id} delay={index * 0.1}>
+            <Reveal key={project.id} delay={index * 0.1} className="h-full">
               <ProjectCard project={project} isMini />
             </Reveal>
           ))}
