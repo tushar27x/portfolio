@@ -37,12 +37,6 @@ export default function Title() {
                   <div className="absolute bottom-0 left-0 w-6 h-6 lg:w-8 lg:h-8 border-b-2 border-l-2 border-primary" />
                   <div className="absolute bottom-0 right-0 w-6 h-6 lg:w-8 lg:h-8 border-b-2 border-r-2 border-primary" />
 
-                  {/* Scanning Line */}
-                  <motion.div
-                    animate={{ top: ['0%', '100%', '0%'] }}
-                    transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-                    className="absolute left-0 right-0 h-px bg-primary/40 z-30"
-                  />
                 </div>
 
                 <div className="absolute -inset-6 sm:-inset-10 bg-primary/10 rounded-full blur-[60px] lg:blur-[100px] opacity-20 animate-pulse" />

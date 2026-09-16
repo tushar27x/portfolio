@@ -4,8 +4,8 @@ import Reveal from "../Reveal"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { motion } from "framer-motion"
-import { Binary, Cpu, Layers, Workflow } from "lucide-react"
-import { skills, detailedSkills } from "@/app/utils/skills"
+import { ArrowDown, Binary, Cpu } from "lucide-react"
+import { skills } from "@/app/utils/skills"
 
 const About = () => {
   return (
@@ -65,15 +65,15 @@ const About = () => {
                 <div className="flex items-center justify-between mb-8">
                   <h4 className="text-sm font-bold uppercase tracking-[0.2em] flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                    Technical_Matrix
+                    Core_Stack
                   </h4>
                 </div>
 
-                <div className="flex flex-col gap-6 relative z-10 justify-between flex-1">
-                  {Object.entries(detailedSkills).map(([category, stack]) => (
-                    <div key={category} className="space-y-3">
+                <div className="flex flex-col gap-8 relative z-10 flex-1">
+                  {skills.map(({ label, stack }) => (
+                    <div key={label} className="space-y-3">
                       <div className="text-[10px] font-bold text-primary tracking-[0.2em] uppercase border-b border-primary/20 pb-1 w-fit">
-                        {category}
+                        {label}
                       </div>
                       <div className="flex flex-wrap gap-2">
                         {stack.map(s => (
@@ -85,6 +85,13 @@ const About = () => {
                     </div>
                   ))}
                 </div>
+
+                <Link
+                  href="#skills"
+                  className="relative z-10 mt-8 pt-4 border-t border-white/10 text-[10px] font-mono text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
+                >
+                  <ArrowDown size={12} /> $ cat /etc/skills/*.yml
+                </Link>
               </div>
             </Reveal>
           </div>
