@@ -4,32 +4,47 @@ export interface SkillCategory {
 }
 
 export const skills: SkillCategory[] = [
-  { label: "BACKEND", stack: ["Java", "Netty", "Python", "FastAPI"] },
-  { label: "FRONTEND", stack: ["React.js", "Next.js", "TypeScript", "Tailwind"] },
-  { label: "DATA", stack: ["Elasticsearch", "Kafka", "Redis", "PostgreSQL"] }
+  { label: "BACKEND", stack: ["Python", "FastAPI", "Java", "Netty"] },
+  { label: "DATA", stack: ["PostgreSQL", "Elasticsearch", "Redis", "Kafka"] },
+  { label: "AI / LLM", stack: ["RAG", "Embeddings", "Prompt Eval", "Claude"] }
 ];
 
 export const detailedSkills = {
-  Languages: ["Java", "Python", "JavaScript", "TypeScript", "SQL"],
-  "Backend & Systems": [
+  Languages: ["Python", "JavaScript", "TypeScript", "Java", "Go", "SQL"],
+  "Backend & APIs": [
+    "FastAPI (async)",
+    "REST API Design",
+    "SQLAlchemy",
+    "OAuth2/JWT",
+    "Spring Boot",
     "Netty",
-    "Kafka",
-    "Elasticsearch",
-    "FastAPI",
-    "REST APIs",
-    "Redis",
-    "Async Processing"
+    "Microservices"
   ],
-  Databases: ["PostgreSQL", "MySQL", "MongoDB"],
-  "Tools & DevOps": [
-    "Jenkins",
+  "Data, Messaging & Cloud": [
+    "PostgreSQL",
+    "MySQL",
+    "Redis",
+    "Elasticsearch",
+    "Kafka",
+    "GraphQL",
+    "AWS (EC2, S3, DynamoDB)"
+  ],
+  "AI/LLM Systems": [
+    "RAG",
+    "Vector Search",
+    "Prompt Design & Eval",
+    "LLM Orchestration",
+    "Multi-provider Failover",
+    "Structured Outputs"
+  ],
+  "DevOps & Practices": [
+    "Jenkins CI/CD",
     "Docker",
     "Git",
-    "CI/CD",
-    "Prometheus",
-    "Grafana"
+    "Logging & Monitoring",
+    "Root-cause Analysis"
   ],
-  Frontend: ["React.js", "Next.js", "Tailwind CSS", "UI/UX Design"],
+  Frontend: ["React.js", "Next.js", "Tailwind CSS"],
 };
 
 export default skills;

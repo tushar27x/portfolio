@@ -37,7 +37,7 @@ export default function SystemDeepDive() {
                 
                 <div className="space-y-6 relative z-10">
                   <p className="text-muted-foreground leading-relaxed italic font-mono text-sm">
-                    {"//"} High-concurrency data pipeline processing 1M+ daily data points for 50+ enterprise teams.
+                    {"//"} KPI analytics service owned end-to-end for 50-60 enterprise clients across 3 product lines (SFA, eB2B, COE).
                   </p>
                   
                   <div className="flex flex-col gap-4">
@@ -84,20 +84,20 @@ export default function SystemDeepDive() {
                 <div className="space-y-8">
                   <div className="grid grid-cols-2 gap-6">
                     <div className="space-y-1">
-                      <div className="text-[9px] font-mono text-muted-foreground uppercase tracking-widest">Latency_Improvement</div>
-                      <div className="text-2xl font-black text-primary">-30%</div>
+                      <div className="text-[9px] font-mono text-muted-foreground uppercase tracking-widest">Dashboard_Latency (was 800ms)</div>
+                      <div className="text-2xl font-black text-primary">&lt;200ms</div>
                     </div>
                     <div className="space-y-1">
-                      <div className="text-[9px] font-mono text-muted-foreground uppercase tracking-widest">Uptime_Reliability</div>
-                      <div className="text-2xl font-black text-primary">99.9%</div>
+                      <div className="text-[9px] font-mono text-muted-foreground uppercase tracking-widest">KPI_Breakdowns</div>
+                      <div className="text-2xl font-black text-primary">&lt;300ms</div>
                     </div>
                     <div className="space-y-1">
-                      <div className="text-[9px] font-mono text-muted-foreground uppercase tracking-widest">Throughput_Scale</div>
-                      <div className="text-2xl font-black text-primary">1M+/DAY</div>
+                      <div className="text-[9px] font-mono text-muted-foreground uppercase tracking-widest">ETL_Runtime</div>
+                      <div className="text-2xl font-black text-primary">-90%</div>
                     </div>
                     <div className="space-y-1">
-                      <div className="text-[9px] font-mono text-muted-foreground uppercase tracking-widest">Response_Speed</div>
-                      <div className="text-2xl font-black text-primary">+25%</div>
+                      <div className="text-[9px] font-mono text-muted-foreground uppercase tracking-widest">Clients_Supported</div>
+                      <div className="text-2xl font-black text-primary">50-60</div>
                     </div>
                   </div>
 

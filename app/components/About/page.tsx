@@ -46,7 +46,7 @@ const About = () => {
                     <p className="text-lg md:text-xl text-muted-foreground leading-relaxed font-mono">
                       <span className="text-primary font-bold">{'>'}</span> I am a Software Engineer who views code as a tool for architectural precision.
                       Focusing on the intersection of <span className="text-foreground font-bold decoration-primary/30">high-performance systems</span> and <span className="text-foreground font-bold decoration-primary/30">scalable user interfaces</span>.
-                      Currently engineering the next generation of KPI analytics at <Link href="https://salescode.ai/" target="_blank" className="text-foreground font-bold hover:text-primary transition-colors underline decoration-primary/30">Salescode.ai</Link>.
+                      Most recently owned the KPI analytics platform end-to-end at <Link href="https://salescode.ai/" target="_blank" className="text-foreground font-bold hover:text-primary transition-colors underline decoration-primary/30">Salescode.ai</Link>.
                     </p>
                   </div>
                 </div>
@@ -105,10 +105,10 @@ const About = () => {
                 </div>
                 <div className="md:col-span-3">
                   <p className="text-sm md:text-base text-muted-foreground leading-relaxed font-mono italic">
-                    {'//'} currently deployed at <span className="text-foreground font-bold">Salescode.ai</span> as a
+                    {'//'} previously deployed at <span className="text-foreground font-bold">Salescode.ai</span> as a
                     <span className="text-foreground font-bold"> Software Engineer</span>.
-                    optimizing performance across Java backends and React frontends
-                    while managing complex data flows with Elasticsearch and MySQL.
+                    now building Python/FastAPI services and LLM systems (RAG, multi-provider failover)
+                    over PostgreSQL, Redis, Elasticsearch and Kafka.
                   </p>
                 </div>
               </div>

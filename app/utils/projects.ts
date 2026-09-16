@@ -15,6 +15,18 @@ interface Project {
 
 const projects: Project[] = [
     {
+        id: 10,
+        title: 'Socratese',
+        description: 'A Socratic tutor over Obsidian notes: a local RAG pipeline grounds an LLM that only asks questions, never answers, forcing you to reconstruct your own notes from memory.',
+        challenge: 'Resolved 6-turn question loops by moving stall detection into deterministic code after 3 measured prompt fixes failed (1 made adherence worse); shipped 249 mutation-verified tests with the TUI driven headlessly under strict pyright.',
+        imageUrl: '/socratese.png',
+        gitHubUrl: 'https://github.com/tushar27x/socratese-cli',
+        tech: ["Python", "Typer", "Textual", "RAG", "OpenAI Embeddings", "Chroma", "Anthropic Claude", "SQLite"],
+        category: 'cli',
+        status: 'completed',
+        featured: true
+    },
+    {
         id: 9,
         title: 'InsightsHub',
         description: 'An AI-powered GitHub analytics engine transforming activity into narrative insights using LLMs and async data pipelines.',

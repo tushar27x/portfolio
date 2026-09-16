@@ -15,17 +15,19 @@ const experiences: Experience[] = [
     logoUrl: "/salescode.png",
     position: "Software Engineer",
     startDate: "Aug 2024",
-    endDate: "Present",
+    endDate: "Aug 2026",
     description:
-      "Backend Engineer for SalesLens (KPI analytics platform). Focused on optimizing Java/Netty services and Elasticsearch retrieval systems for real-time monitoring.",
+      "Backend Engineer for SalesLens (KPI analytics & dashboard platform). Owned the KPI analytics service used by 50-60 clients end-to-end — from gathering requirements to production support — across Elasticsearch, Redis, Kafka and AWS.",
     responsibilities: [
-      "Reduced query latency by 30% through Elasticsearch indexing strategies and query refactoring of KPI engines.",
-      "Automated KPI batch processing via Jenkins, reducing manual effort by 40% for high-volume data ingestion.",
-      "Built hierarchical analytics frameworks for 50+ teams to enable precise performance tracking.",
-      "Developed high-concurrency RESTful services using Netty, maintaining 99.9% reliability for mission-critical metrics.",
-      "Improved dashboard responsiveness by 25% through backend data aggregation and MySQL schema optimization.",
+      "Cut dashboard API latency from 700-800ms to under 200ms by building a runtime query aggregation API with Redis caching, replacing a static layout that re-aggregated 2 years of history on every request.",
+      "Enabled real-time KPI breakdowns by user, location and division under 300ms with a pivot index strategy on Elasticsearch.",
+      "Reduced an ETL pipeline's runtime by 90% (30-40 minutes to 3-5) by rebuilding how it consumed ML-generated recommendations from AWS S3.",
+      "Eliminated batch delay in KPI reporting with an event-driven scheduler polling every 30 seconds and orchestrating in-memory KPI calculation.",
+      "Automated multi-step KPI batch runs on Jenkins CI/CD, turning hand-started runs with no recovery path into scheduled, repeatable, recoverable ones.",
+      "Onboarded and supported 50-60 clients across 3 product lines (SFA, eB2B, COE), translating business requirements into client-specific KPI logic.",
+      "Won the Lead Performer Award (2025) for independently designing and delivering the platform's custom KPI computation logic.",
     ],
-    skills: ["Java", "Netty", "Elasticsearch", "MySQL", "Jenkins", "REST APIs", "CI/CD", "Redis"]
+    skills: ["Java", "Netty", "Elasticsearch", "Redis", "Kafka", "AWS S3", "MySQL", "Jenkins", "REST APIs", "CI/CD"]
   },
 ];
 
