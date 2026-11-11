@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html className='scroll-smooth' lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${mono.variable} font-mono min-h-screen bg-background text-foreground antialiased selection:bg-primary/30`}>
+      <body className={`${inter.variable} ${mono.variable} font-mono min-h-screen bg-background text-foreground antialiased selection:bg-brand/30`}>
       <ThemeProvider
         attribute="class"
         defaultTheme="dark"

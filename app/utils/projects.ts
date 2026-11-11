@@ -16,12 +16,12 @@ interface Project {
 const projects: Project[] = [
     {
         id: 1,
-        title: 'InsightsHub',
+        title: 'Commit Quest',
         description: 'A pixel-art habit tracker that turns your GitHub commit streak into a D&D hero that gains XP when you code and loses a heart when you don\'t.',
         challenge: 'Keeping a daily game honest on top of GitHub\'s lagging, timezone-blind contribution data (branch scans, DST-safe day windows, private-count leaks) while running reliable AI features and a full-stack deploy on a 1 GB free-tier budget.',
-        imageUrl: '/insights_hub.png',
-        gitHubUrl: 'https://github.com/tushar27x/insightsHubV2',
-        liveUrl: 'https://insights-hub-v2-one.vercel.app/',
+        imageUrl: '/commitquest.png',
+        gitHubUrl: 'https://github.com/tushar27x/commitquest',
+        liveUrl: 'https://commitquest-alpha.vercel.app/',
         tech: ["Java 21", "Spring Boot", "Spring AI", "PostgreSQL", "Redis", "LLM Integration", "GraphQL", "Next.js"],
         category: 'fullstack',
         status: 'completed',

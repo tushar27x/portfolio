@@ -22,8 +22,8 @@ const Skills = () => {
       <div className="container mx-auto px-4 relative z-10">
         <Reveal>
           <div className="flex items-center gap-4 mb-20 justify-center lg:justify-start">
-            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center border border-primary/20">
-              <Code2 className="text-primary" />
+            <div className="w-12 h-12 bg-brand/10 rounded-xl flex items-center justify-center border border-brand/20">
+              <Code2 className="text-brand" />
             </div>
             <div className="text-center lg:text-left">
               <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tighter uppercase font-mono">04_SYSTEM_DEPENDENCIES</h2>
@@ -42,7 +42,7 @@ const Skills = () => {
             return (
               <Reveal key={category} delay={index * 0.05}>
                 <div className="group h-[320px]">
-                  <div className="relative h-full border border-black/10 dark:border-white/10 rounded-xl bg-white/5 dark:bg-black/40 backdrop-blur-xl overflow-hidden group-hover:border-primary/50 transition-all duration-300 shadow-xl dark:shadow-primary/5 flex flex-col">
+                  <div className="relative h-full border border-black/10 dark:border-white/10 rounded-xl bg-white/5 dark:bg-black/40 backdrop-blur-xl overflow-hidden group-hover:border-brand/50 transition-all duration-300 shadow-xl dark:shadow-brand/5 flex flex-col">
 
                     {/* Terminal Header */}
                     <div className="bg-black/10 dark:bg-white/5 px-4 py-2 border-b border-black/5 dark:border-white/10 flex items-center justify-between">
@@ -74,7 +74,7 @@ const Skills = () => {
                           <div key={skill} className="flex gap-4 group/line">
                             <span className="text-muted-foreground/30 select-none">{String(i + 3).padStart(2, '0')}</span>
                             <div className="flex items-center gap-2 pl-4">
-                              <span className="text-primary/40 group-hover/line:text-primary transition-colors">-</span>
+                              <span className="text-brand/40 group-hover/line:text-brand transition-colors">-</span>
                               <span className="text-muted-foreground group-hover:text-foreground transition-colors">{skill}</span>
                             </div>
                           </div>
@@ -93,8 +93,8 @@ const Skills = () => {
         {/* System Footer */}
         <Reveal>
           <div className="mt-20 flex justify-center">
-            <div className="px-6 py-3 rounded-xl border border-dashed border-black/10 dark:border-white/10 bg-primary/5 flex items-center gap-3">
-              <Box size={14} className="text-primary" />
+            <div className="px-6 py-3 rounded-xl border border-dashed border-black/10 dark:border-white/10 bg-brand/5 flex items-center gap-3">
+              <Box size={14} className="text-brand" />
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
                 ALL_SYSTEMS_GO // HASH: 0xTS27A
               </span>

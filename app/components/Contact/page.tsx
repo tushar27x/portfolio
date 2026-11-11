@@ -43,8 +43,8 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <Reveal>
           <div className="flex items-center gap-4 mb-12">
-            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center border border-primary/20 shrink-0">
-              <Terminal className="text-primary" />
+            <div className="w-12 h-12 bg-brand/10 rounded-xl flex items-center justify-center border border-brand/20 shrink-0">
+              <Terminal className="text-brand" />
             </div>
             <div className="min-w-0">
               <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tighter uppercase truncate">Connect.exe</h2>
@@ -84,7 +84,7 @@ const Contact = () => {
                       {line.value !== undefined && (
                         <>
                           {' '}
-                          <span className={line.kind === 'bool' ? 'text-primary' : 'text-green-400'}>{line.value}</span>
+                          <span className={line.kind === 'bool' ? 'text-brand' : 'text-brand/80'}>{line.value}</span>
                         </>
                       )}
                     </p>
@@ -94,14 +94,14 @@ const Contact = () => {
               <div className="flex gap-4 mt-8">
                 <span className="text-muted-foreground/30 select-none">{String(yamlLines.length + 1).padStart(2, '0')}</span>
                 <p className="break-all">
-                  <span className="text-primary">$</span> curl -s localhost:8080/ping
+                  <span className="text-brand">$</span> curl -s localhost:8080/ping
                 </p>
               </div>
               <div className="flex gap-4">
                 <span className="text-muted-foreground/30 select-none">{String(yamlLines.length + 2).padStart(2, '0')}</span>
                 <p className="text-muted-foreground break-all">
-                  &#123;&quot;status&quot;: <span className="text-green-400">&quot;ok&quot;</span>, &quot;open_to_work&quot;: <span className="text-primary">true</span>&#125;
-                  <span className="text-primary animate-pulse ml-1">_</span>
+                  &#123;&quot;status&quot;: <span className="text-brand/80">&quot;ok&quot;</span>, &quot;open_to_work&quot;: <span className="text-brand">true</span>&#125;
+                  <span className="text-brand animate-pulse ml-1">_</span>
                 </p>
               </div>
 
@@ -121,10 +121,10 @@ const Contact = () => {
                   key={chan.name}
                   href={chan.href}
                   target="_blank"
-                  className="flex items-center justify-between p-4 rounded-xl bg-white/20 dark:bg-black/20 backdrop-blur-xl border border-black/10 dark:border-white/10 hover:border-primary/50 transition-all group gap-2"
+                  className="flex items-center justify-between p-4 rounded-xl bg-white/20 dark:bg-black/20 backdrop-blur-xl border border-black/10 dark:border-white/10 hover:border-brand/50 transition-all group gap-2"
                 >
                   <div className="flex items-center gap-3 min-w-0">
-                    <chan.icon size={16} className="text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
+                    <chan.icon size={16} className="text-muted-foreground group-hover:text-brand transition-colors shrink-0" />
                     <span className="text-xs font-bold uppercase tracking-tight truncate">{chan.name}</span>
                   </div>
                   <span className="text-[10px] text-muted-foreground font-mono truncate shrink-0">{chan.val}</span>

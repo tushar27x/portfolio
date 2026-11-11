@@ -16,8 +16,8 @@ interface SideMenuProps {
 export default function SideMenu({ isOpen, onClose }: SideMenuProps) {
   return (
     <Sheet open={isOpen} onOpenChange={onClose}>
-      <SheetContent side="right" className="w-[300px] sm:w-[400px] !bg-white dark:!bg-black border-l-primary/20 flex flex-col">
-        <SheetHeader className="flex flex-row items-center justify-between space-y-0 pb-4 border-b border-primary/10">
+      <SheetContent side="right" className="w-[300px] sm:w-[400px] !bg-white dark:!bg-black border-l-brand/20 flex flex-col">
+        <SheetHeader className="flex flex-row items-center justify-between space-y-0 pb-4 border-b border-brand/10">
           <SheetTitle className="text-xl font-black tracking-tighter uppercase">Menu.sys</SheetTitle>
           <ModeToggle />
         </SheetHeader>
@@ -33,7 +33,7 @@ export default function SideMenu({ isOpen, onClose }: SideMenuProps) {
           </nav>
         </ScrollArea>
         
-        <div className="pt-6 border-t border-primary/10">
+        <div className="pt-6 border-t border-brand/10">
           <Button 
             onClick={download}
             className="w-full flex items-center gap-3 bg-primary text-primary-foreground font-bold"

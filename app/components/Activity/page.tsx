@@ -7,10 +7,10 @@ type Day = { date: string; count: number; level: 0 | 1 | 2 | 3 | 4 };
 
 const LEVEL_STYLES: Record<Day['level'], string> = {
   0: 'bg-black/5 dark:bg-white/5',
-  1: 'bg-green-500/25',
-  2: 'bg-green-500/50',
-  3: 'bg-green-500/75',
-  4: 'bg-green-400',
+  1: 'bg-brand/25',
+  2: 'bg-brand/50',
+  3: 'bg-brand/75',
+  4: 'bg-brand',
 };
 
 async function getContributions(): Promise<Day[] | null> {
@@ -84,8 +84,8 @@ const Activity = async () => {
       <div className="container mx-auto px-4 relative z-10">
         <Reveal>
           <div className="flex items-center gap-4 mb-12 justify-center lg:justify-start">
-            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center border border-primary/20 shrink-0">
-              <GitBranch className="text-primary" />
+            <div className="w-12 h-12 bg-brand/10 rounded-xl flex items-center justify-center border border-brand/20 shrink-0">
+              <GitBranch className="text-brand" />
             </div>
             <div className="text-center lg:text-left">
               <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tighter uppercase font-mono">05_COMMIT_LOG</h2>
@@ -108,7 +108,7 @@ const Activity = async () => {
                 href={`https://github.com/${USERNAME}`}
                 target="_blank"
                 rel="noreferrer"
-                className="text-[10px] text-muted-foreground hover:text-primary transition-colors uppercase tracking-widest font-bold"
+                className="text-[10px] text-muted-foreground hover:text-brand transition-colors uppercase tracking-widest font-bold"
               >
                 github.com/{USERNAME}
               </a>

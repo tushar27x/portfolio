@@ -23,27 +23,30 @@ export default function Title() {
             {/* Right: Technical Avatar Overlay */}
             <div className="lg:col-span-5 relative flex justify-center lg:justify-end order-first lg:order-last p-4">
               <div className="relative w-full max-w-[280px] sm:max-w-[350px] lg:max-w-[450px] aspect-square">
-                {/* HUD Elements */}
-                <div className="absolute -inset-4 sm:-inset-8 z-20 pointer-events-none">
-                  {/* Rotating Outer Ring */}
+                {/* Rotating Outer Ring (behind the photo) */}
+                <div className="absolute -inset-4 sm:-inset-8 z-0 pointer-events-none">
                   <motion.div
                     animate={{ rotate: 360 }}
                     transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                    className="absolute inset-0 border-2 border-dashed border-primary/20 rounded-full"
+                    className="absolute inset-0 border-2 border-dashed border-brand/20 rounded-full"
                   />
+                </div>
+
+                {/* HUD Elements */}
+                <div className="absolute -inset-4 sm:-inset-8 z-20 pointer-events-none">
                   {/* Corner Accents */}
-                  <div className="absolute top-0 left-0 w-6 h-6 lg:w-8 lg:h-8 border-t-2 border-l-2 border-primary" />
-                  <div className="absolute top-0 right-0 w-6 h-6 lg:w-8 lg:h-8 border-t-2 border-r-2 border-primary" />
-                  <div className="absolute bottom-0 left-0 w-6 h-6 lg:w-8 lg:h-8 border-b-2 border-l-2 border-primary" />
-                  <div className="absolute bottom-0 right-0 w-6 h-6 lg:w-8 lg:h-8 border-b-2 border-r-2 border-primary" />
+                  <div className="absolute top-0 left-0 w-6 h-6 lg:w-8 lg:h-8 border-t-2 border-l-2 border-brand" />
+                  <div className="absolute top-0 right-0 w-6 h-6 lg:w-8 lg:h-8 border-t-2 border-r-2 border-brand" />
+                  <div className="absolute bottom-0 left-0 w-6 h-6 lg:w-8 lg:h-8 border-b-2 border-l-2 border-brand" />
+                  <div className="absolute bottom-0 right-0 w-6 h-6 lg:w-8 lg:h-8 border-b-2 border-r-2 border-brand" />
 
                 </div>
 
-                <div className="absolute -inset-6 sm:-inset-10 bg-primary/10 rounded-full blur-[60px] lg:blur-[100px] opacity-20 animate-pulse" />
+                <div className="absolute -inset-6 sm:-inset-10 bg-brand/10 rounded-full blur-[60px] lg:blur-[100px] opacity-20 animate-pulse" />
 
-                <div className="relative z-10 h-full w-full rounded-[2rem] lg:rounded-[2.5rem] overflow-hidden border border-white/10 p-1.5 lg:p-2 bg-black/40 backdrop-blur-xl group">
-                  <Avatar className="w-full h-full rounded-[1.5rem] lg:rounded-[2rem] transition-all duration-1000 group-hover:scale-105">
-                    <AvatarImage src="/profile-rounded.jpg" alt="Tushar Sharma" className="object-cover" />
+                <div className="relative z-10 h-full w-full rounded-[2rem] lg:rounded-[2.5rem] overflow-hidden ring-1 ring-black/10 dark:ring-white/10 shadow-2xl group">
+                  <Avatar className="w-full h-full rounded-none transition-all duration-1000 group-hover:scale-105">
+                    <AvatarImage src="/profile-headshot.jpg" alt="Tushar Sharma" className="object-cover" />
                     <AvatarFallback className="text-4xl font-black">TS</AvatarFallback>
                   </Avatar>
                 </div>
@@ -57,7 +60,7 @@ export default function Title() {
                   <Reveal delay={0.2}>
                     <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-[7.5rem] font-black tracking-tighter leading-[0.85] lg:leading-[0.8] uppercase flex flex-col">
                       <span className="block text-foreground">Tushar</span>
-                      <span className="block text-primary italic">Sharma</span>
+                      <span className="block text-brand italic">Sharma</span>
                     </h1>
                   </Reveal>
 
@@ -73,7 +76,7 @@ export default function Title() {
                       Software Engineer
                     </div>
                     <div className="flex items-center gap-2 font-mono text-[10px] lg:text-[11px] text-muted-foreground min-h-[1.5rem]">
-                      <span className="text-primary font-bold">{'>'}</span>
+                      <span className="text-brand font-bold">{'>'}</span>
                       <TypeAnimation
                         sequence={[
                           'Distributed Systems Engineering',
@@ -95,7 +98,7 @@ export default function Title() {
               <div className="flex flex-wrap justify-center lg:justify-start gap-4 lg:gap-6 pt-4 lg:pt-6">
                 <Button
                   onClick={download}
-                  className="relative flex items-center gap-3 lg:gap-4 bg-primary hover:bg-primary/90 text-primary-foreground px-8 lg:px-10 py-6 lg:py-8 rounded-xl lg:rounded-2xl transition-all duration-500 hover:scale-[1.02] shadow-[0_0_30px_rgba(var(--primary-rgb),0.2)] lg:shadow-[0_0_40px_rgba(var(--primary-rgb),0.3)] group overflow-hidden"
+                  className="relative flex items-center gap-3 lg:gap-4 bg-primary hover:bg-primary/90 text-primary-foreground px-8 lg:px-10 py-6 lg:py-8 rounded-xl lg:rounded-2xl transition-all duration-500 hover:scale-[1.02] shadow-[0_0_30px_hsl(var(--brand)/0.3)] lg:shadow-[0_0_40px_hsl(var(--brand)/0.45)] group overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
                   <span className="text-xs lg:text-sm font-black tracking-widest relative z-10 uppercase">Download_Technical_Resume</span>

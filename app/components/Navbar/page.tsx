@@ -65,7 +65,7 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
       <Button 
         variant="ghost" 
         size="sm"
-        className="hover:bg-primary/10 transition-all duration-200 hover:scale-105 text-[10px] sm:text-xs md:text-sm font-medium px-1.5 sm:px-2 md:px-2 lg:px-3"
+        className="hover:bg-brand/10 transition-all duration-200 hover:scale-105 text-[10px] sm:text-xs md:text-sm font-medium px-1.5 sm:px-2 md:px-2 lg:px-3"
       >
         {children}
       </Button>

@@ -29,26 +29,26 @@ const ExperienceCard = ({
   timelinePosition,
 }: ExperienceCardProps) => {
   return (
-    <Card className="rounded-3xl border border-black/5 dark:border-white/10 shadow-xl dark:shadow-primary/5 bg-card/50 backdrop-blur-sm hover:shadow-2xl hover:border-primary/30 transition-all duration-500 relative overflow-hidden group">
+    <Card className="rounded-3xl border border-black/5 dark:border-white/10 shadow-xl dark:shadow-brand/5 bg-card/50 backdrop-blur-sm hover:shadow-2xl hover:border-brand/30 transition-all duration-500 relative overflow-hidden group">
       {/* Adventure Progress Indicator */}
-      <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-primary to-primary/50"></div>
+      <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-brand to-brand/50"></div>
 
       {/* Adventure Trail Decoration */}
-      <div className="absolute top-4 right-4 text-primary/20 text-2xl">{timelinePosition === 1 ? "🎯" : "🏆"}</div>
+      <div className="absolute top-4 right-4 text-brand/20 text-2xl">{timelinePosition === 1 ? "🎯" : "🏆"}</div>
 
       <CardHeader className="p-6 pb-4">
         <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
-          <div className="w-16 h-16 relative flex-shrink-0 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-200 ring-2 ring-primary/20">
+          <div className="w-16 h-16 relative flex-shrink-0 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-200 ring-2 ring-brand/20">
             <Image src={logoUrl || "/placeholder.svg"} alt={`${companyName} logo`} className="object-cover" fill />
           </div>
           <div className="flex-1 space-y-2">
             <div className="flex items-center gap-2">
-              <Building2 className="w-4 h-4 text-primary" />
+              <Building2 className="w-4 h-4 text-brand" />
               <span className="text-sm text-muted-foreground font-medium">{companyName}</span>
               {milestone && (
                 <div className="flex items-center gap-1 ml-auto">
-                  <MapPin className="w-3 h-3 text-primary" />
-                  <span className="text-xs text-primary font-medium">{milestone}</span>
+                  <MapPin className="w-3 h-3 text-brand" />
+                  <span className="text-xs text-brand font-medium">{milestone}</span>
                 </div>
               )}
             </div>
@@ -61,7 +61,7 @@ const ExperienceCard = ({
                 </span>
               </div>
               {elevation && (
-                <div className="flex items-center gap-1 text-xs text-primary">
+                <div className="flex items-center gap-1 text-xs text-brand">
                   <Mountain className="w-3 h-3" />
                   <span className="font-medium">{elevation}</span>
                 </div>
@@ -79,13 +79,13 @@ const ExperienceCard = ({
 
           <div className="space-y-3">
             <h4 className="text-base font-semibold text-foreground flex items-center gap-2">
-              <TrendingUp className="w-4 h-4 text-primary" />
+              <TrendingUp className="w-4 h-4 text-brand" />
               Achievements
             </h4>
             <ul className="space-y-2">
               {responsibilities.map((responsibility, index) => (
                 <li key={index} className="flex items-start gap-3 text-sm text-muted-foreground">
-                  <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-1.5 h-1.5 bg-brand rounded-full mt-2 flex-shrink-0"></div>
                   <span className="leading-relaxed">{responsibility}</span>
                 </li>
               ))}
@@ -102,7 +102,7 @@ const ExperienceCard = ({
                 <Badge
                   key={skill}
                   variant="secondary"
-                  className="text-xs hover:scale-105 transition-transform duration-200 hover:bg-primary/10"
+                  className="text-xs hover:scale-105 transition-transform duration-200 hover:bg-brand/10"
                 >
                   {skill}
                 </Badge>
@@ -111,12 +111,12 @@ const ExperienceCard = ({
           </div>
 
           {/* Adventure Timeline Badge */}
-          <div className="pt-3 border-t border-primary/10">
+          <div className="pt-3 border-t border-brand/10">
             <div className="flex items-center justify-between text-xs">
               <span className="text-muted-foreground">Checkpoint</span>
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span className="text-primary font-medium">
+                <div className="w-2 h-2 bg-brand rounded-full"></div>
+                <span className="text-brand font-medium">
                   {timelinePosition === 1 ? "Journey Begins" : "Current Position"}
                 </span>
               </div>
