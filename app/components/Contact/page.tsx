@@ -24,7 +24,7 @@ const Contact = () => {
     { kind: 'blank' },
     { kind: 'key', key: 'runtime' },
     { kind: 'str', key: 'role', value: 'backend engineer', indent: 1 },
-    { kind: 'str', key: 'stack', value: '[java, spring boot, python, fastapi, java, netty]', indent: 1 },
+    { kind: 'str', key: 'stack', value: '[python, fastapi, java, netty]', indent: 1 },
     { kind: 'str', key: 'data', value: '[postgres, redis, kafka, elasticsearch]', indent: 1 },
     { kind: 'blank' },
     { kind: 'key', key: 'healthcheck' },
