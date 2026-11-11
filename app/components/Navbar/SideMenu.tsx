@@ -26,9 +26,9 @@ export default function SideMenu({ isOpen, onClose }: SideMenuProps) {
             <NavLink href="#home" onClick={onClose}>00_Home</NavLink>
             <NavLink href="#about" onClick={onClose}>01_About</NavLink>
             <NavLink href="#skills" onClick={onClose}>02_Skills</NavLink>
-            <NavLink href="#deep-dive" onClick={onClose}>03_System_Deep_Dive</NavLink>
-            <NavLink href="#experience" onClick={onClose}>04_Experience</NavLink>
-            <NavLink href="#project" onClick={onClose}>05_Projects</NavLink>
+            <NavLink href="#experience" onClick={onClose}>03_Experience</NavLink>
+            <NavLink href="#project" onClick={onClose}>04_Projects</NavLink>
+            <NavLink href="#activity" onClick={onClose}>05_Activity</NavLink>
             <NavLink href="#contact" onClick={onClose}>06_Contact</NavLink>
           </nav>
         </ScrollArea>

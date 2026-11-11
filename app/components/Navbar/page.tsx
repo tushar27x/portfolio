@@ -37,14 +37,14 @@ export default function Navbar() {
           ? 'opacity-100 translate-y-0' 
           : 'opacity-0 -translate-y-4 pointer-events-none'
       } bg-background/80 backdrop-blur-md border border-border/50 shadow-lg rounded-2xl`}>
-        <div className="flex flex-row justify-between md:justify-center items-center gap-0.5 sm:gap-1 md:gap-2 px-3 md:px-6 py-2 md:py-3">
+        <div className="flex flex-row justify-between md:justify-center items-center gap-0.5 sm:gap-1 md:gap-2 px-3 md:px-4 lg:px-6 py-2 md:py-3">
           <div className="hidden md:flex flex-row items-center gap-1 md:gap-2">
             <NavLink href="#home">Home</NavLink>
             <NavLink href="#about">About</NavLink>
             <NavLink href="#skills">Skills</NavLink>
-            <NavLink href="#deep-dive">Systems</NavLink>
             <NavLink href='#experience'>Experience</NavLink>
             <NavLink href="#project">Projects</NavLink>
+            <NavLink href="#activity">Activity</NavLink>
             <NavLink href="#contact">Contact</NavLink>
           </div>
           
@@ -65,7 +65,7 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
       <Button 
         variant="ghost" 
         size="sm"
-        className="hover:bg-primary/10 transition-all duration-200 hover:scale-105 text-[10px] sm:text-xs md:text-sm font-medium px-1.5 sm:px-2 md:px-3"
+        className="hover:bg-primary/10 transition-all duration-200 hover:scale-105 text-[10px] sm:text-xs md:text-sm font-medium px-1.5 sm:px-2 md:px-2 lg:px-3"
       >
         {children}
       </Button>

@@ -5,6 +5,7 @@ import Contact from './components/Contact/page'
 import Navbar from './components/Navbar/page'
 import Skills from './components/Skills/page'
 import Experience from './components/Experience/page';
+import Activity from './components/Activity/page';
 import FloatingThemeToggle from './components/FloatingThemeToggle';
 
 export default function Home() {
@@ -37,7 +38,7 @@ export default function Home() {
         <section id="skills" className="relative">
           <Skills />
         </section>
-        
+
         <section id="experience" className="relative overflow-hidden">
            <div className="absolute -right-10 bottom-20 select-none pointer-events-none">
             <span className="text-[8vw] sm:text-[15vw] font-black text-stroke uppercase leading-none opacity-10 -rotate-90 origin-right">
@@ -49,6 +50,10 @@ export default function Home() {
         
         <section id="project" className="relative">
           <Projects />
+        </section>
+
+        <section id="activity" className="relative">
+          <Activity />
         </section>
         
         <section id="contact" className="relative overflow-hidden">
