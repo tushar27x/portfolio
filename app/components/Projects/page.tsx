@@ -118,7 +118,7 @@ const Projects = () => {
         </div>
 
         {/* Labs/Tutorial Section */}
-        {/* <Reveal>
+        <Reveal>
           <div className="flex items-center gap-4 mb-12">
             <div className="h-px flex-1 bg-gradient-to-r from-transparent to-white/10" />
             <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm">
@@ -127,7 +127,7 @@ const Projects = () => {
             </div>
             <div className="h-px flex-1 bg-gradient-to-l from-transparent to-white/10" />
           </div>
-        </Reveal> */}
+        </Reveal>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto">
           {tutorialProjects.map((project, index) => (
